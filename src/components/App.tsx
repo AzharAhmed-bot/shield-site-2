@@ -20,10 +20,7 @@ function App() {
         return <Route path={route.path} element={route.component} />
       })}
     </Routes>
-    <div>
-      <h1>Hello</h1>
-      <Spline scene="https://my.spline.design/lightningbulb-70fff288e78726d13bbf9092ab84bce0/"></Spline>
-    </div>
+
     </>
   )
 }
