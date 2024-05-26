@@ -1,7 +1,14 @@
 import Button from "./Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import Spline from "@splinetool/react-spline";
 import design from "../assets/design.png";
+import project1 from "../assets/project1.jpg";
+import project2 from "../assets/project2.jpg";
+import project3 from "../assets/project3.jpg";
+import project4 from "../assets/project4.jpg";
+import partner1 from "../assets/partner1.png";
+import partner2 from "../assets/partner2.png";
+import partner3 from "../assets/partner3.png";
 
 const Home = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -34,37 +41,45 @@ const Home = () => {
 
   const cardContent = [
     {
-      title: "Tailwind card",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula."
+      image:project1,
+      title: "Waweza foundation",
+      description: "Fun workshop teaches problem-solving, creativity, pitching, empowering kids effectively."
     },
     {
-      title: "Tailwind card",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula."
+      image:project2,
+      title: "Empowering minds",
+      description: "Fun workshop teaches problem-solving, creativity, pitching, empowering kids effectively."
     },
     {
-      title: "Tailwind card",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula."
+      image:project3,
+      title: "Young innovators",
+      description: "Fun, interactive workshop empowers kids with problem-solving, creativity, pitching."
     },
     {
-      title: "Tailwind card",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis ligula."
+      image:project4,
+      title: "Innovative youth",
+      description: "Youthful minds engage in problem-solving, creativity, and persuasive pitching."
     }
   ];
   const partnershipItems = [
     {
+      image:partner1,
       name: "Partner 1",
       description: "Description of Partner 1."
     },
     {
+      image:partner2,
       name: "Partner 2",
       description: "Description of Partner 2."
     },
     {
+      image:partner3,
       name: "Partner 3",
       description: "Description of Partner 3."
     },
     // Add more partnership items as needed
   ];
+  
   
 
   return (
@@ -90,7 +105,7 @@ const Home = () => {
         </div>
         <div className="w-full lg:w-1/4 flex items-start lg:mr-40 mt-[-34px]">
           <div className="w-full">
-            <Spline scene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode" style={{ width: '100%' }}></Spline>
+            {/* <Spline scene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode" style={{ width: '100%' }}></Spline> */}
           </div>
         </div>
       </div>
@@ -114,23 +129,22 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className="flex flex-wrap items-start  justify-between mt-32  bg-black h-60 w-full overflow-x-auto">
+      <div className="flex flex-wrap items-start  justify-between mt-32  bg-gray-200 h-60 w-full overflow-x-auto">
         {/* Partnership items */}
         {partnershipItems.map((partner, index) => (
           <div key={index} className="flex items-center justify-center mt-6 m-20">
-            <div className="p-4 bg-gray-200 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold">{partner.name}</h3>
-              <p className="text-sm text-gray-600">{partner.description}</p>
+            <div className="p-4  rounded-lg">
+              <img className="lg:h-20 lg:w-36 md:h-12 md:w-24 sm:h-8 sm:w-12" src={partner.image} alt="Partners" />
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-wrap mt-[-20px] gap-x-4 m-8">
+      <div className="flex flex-wrap mt-[-20px] gap-x-4 gap-y-10 items-center justify-center m-8">
         {cardContent.map((card, index) => (
           <div key={index} className="relative flex w-80 flex-col rounded-xl bg-gray-100 bg-clip-border text-gray-700 shadow-md">
-            <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
-            </div>
+            <img className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600" src={card.image} alt="Projects" />
+    
             <div className="p-6">
               <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                 {card.title}
