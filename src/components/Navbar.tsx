@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import shieldLogo from "../assets/shieldLogo.png";
-
+import { navLinks } from '../constants';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,12 +9,7 @@ const Navbar: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/services', label: 'Services' },
-    { to: '/contact', label: 'Contact' },
-  ];
+ 
 
   return (
     <nav className="bg-gray-100 shadow-md ">
@@ -49,7 +44,7 @@ const Navbar: React.FC = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-gray-50 border-t border-gray-200" id="mobile-menu">
+        <div className="md:hidden bg-gray-50 border-t border-gray-200 " id="mobile-menu">
           <div className="px-4 pt-4 pb-4 space-y-1">
             {navLinks.map((link) => (
               <Link key={link.to} to={link.to} className="block text-gray-700 hover:bg-gray-200 hover:text-gray-900 rounded-md px-3 py-2">
