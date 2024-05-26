@@ -1,6 +1,5 @@
 import Home from "./Home"
 import { Routes ,Route} from "react-router-dom";
-import Spline from "@splinetool/react-spline";
 import Navbar from "./Navbar";
 
 function App() {

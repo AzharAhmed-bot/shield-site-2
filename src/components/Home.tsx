@@ -1,6 +1,8 @@
 import Button from "./Button";
 import design from "../assets/design.png";
 import { useState, useEffect } from "react";
+import Spline from "@splinetool/react-spline";
+
 
 const Home = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -16,42 +18,55 @@ const Home = () => {
   function type() {
     const currentWord = words[wordIndex];
     const shouldDelete = isDeleting ? 1 : -1;
-    // Create the new text
     setText((current) => currentWord.substring(0, current.length - shouldDelete));
-    // Determine if this word is complete
+
     if (!isDeleting && text === currentWord) {
-      // Make a pause at the end
-      setTimeout(() => setIsDeleting(true), 500);
+      setTimeout(() => setIsDeleting(true), 1000);
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
-      // Move to the next word
       setWordIndex((current) => (current + 1) % words.length);
     }
   }
+
   useEffect(() => {
-    const timer = setTimeout(type, isDeleting ? 150 : 250);
-    // Cleanup function to clear the timeout
+    const timer = setTimeout(type, isDeleting ? 100 : 200);
     return () => clearTimeout(timer);
-    // Add dependencies to the dependency array
   }, [wordIndex, isDeleting, text]);
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row min-h-screen bg-gray-100 font-sans">
-      <div className="w-3/4 flex justify-center  py-12">
-        <div className="mx-auto w-full   md:ml-5 sm:ml-3 p-8">
-          <h1 className="text-6xl font-bold text-gray-900 mb-4">
+    <div className="bg-gray-100">
+    <div className="flex flex-col-reverse lg:flex-row min-h-screen bg-gray-100 font-sans pt-8">
+      <div className="w-full lg:w-3/4 flex justify-center items-start py-6">
+        <div className="mx-auto w-full md:ml-20 sm:ml-3 p-8">
+          <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">
             Empowering Visionaries
           </h1>
-          <h2 className="text-2xl text-gray-700 mb-6">{text}|</h2>
+          <h2 className="text-3xl text-gray-700 mb-6 transition-all duration-500 ease-in-out">
+            {text}<span className="blink-cursor">|</span>
+          </h2>
+          <h2 className="text-2xl mt-6 text-gray-600 mb-4">
+            Transforming Ideas into Reality
+          </h2>
           <Button
-            name="Get started"
-            style="bg-yellow-700 text-white py-3 px-6 rounded-xl hover:bg-red-800"
+            name="Get Started"
+            style="bg-yellow-700 mt-6 text-white py-3 px-6 rounded-xl hover:bg-red-800 transition duration-300 ease-in-out"
           />
+          <div className="underline-animation mt-12"></div>
         </div>
       </div>
-      <div className="lg:w-1/4 flex justify-center  py-8 mr-20">
-        <img src={design} alt="" className="w-auto rotate-12 h-96" />
+      <div className="w-76  lg:w-1/4 flex items-start lg:mr-40 mt-[-34px]">
+      <Spline scene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"></Spline>
+       
       </div>
+    </div>
+    <div className="">
+      <div className="w-40">
+       {/* <Spline scene="https://prod.spline.design/J4WFt14a27pf2eZr/scene.splinecode"></Spline> */}
+      </div>
+        <h1 className="lg:text-2xl text-xl font-extrabold text-gray-900 mb-6">
+          SHIELD empowers youth through Design Thinking, fostering innovative entrepreneurship for social change in underserved areas
+        </h1>
+    </div>
     </div>
   );
 };
