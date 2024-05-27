@@ -1,12 +1,9 @@
 // Home.tsx
 import React from 'react';
-// import Spline from '@splinetool/react-spline';
 import design from "../../assets/design.png";
 import Opportunity from './Opportunity';
-import Footer from './Footer';
+import Footer from '../Common/Footer';
 import ShieldSolutions from './SheildSolutions';
-// import Typewriter from './TypeWrite';
-// import Button from '../Button';
 import Card from './Card';
 import Partnership from './Partnership';
 import { partnershipItems, cardContent } from '../../constants';

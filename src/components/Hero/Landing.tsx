@@ -1,8 +1,8 @@
-import React , { Suspense} from "react";
 import Typewrite from "./TypeWrite";
 import { typewriterWords } from "../../constants";
+import { ThreeDModel } from "../Common/ThreeDModel";
 import Button from "../Button";
-const Spline = React.lazy(() => import('@splinetool/react-spline'));
+
 
 
 
@@ -33,11 +33,7 @@ export default function Landing() {
       <div className="w-full lg:w-1/4 flex items-start lg:mr-40 mt-[-34px]">
         <div>
           {/* Spline component */}
-          <Suspense fallback={<div>Loading...</div>}>
-            <Spline
-              scene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"
-            />
-          </Suspense>
+          <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/>
         
         </div>
       </div>
