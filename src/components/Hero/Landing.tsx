@@ -1,6 +1,6 @@
 import Typewrite from "./TypeWrite";
 import { typewriterWords } from "../../constants";
-import { ThreeDModel } from "../Common/ThreeDModel";
+import ThreeDModel from "../Common/ThreeDModel";
 import Button from "../Button";
 
 

@@ -1,4 +1,4 @@
-import { ThreeDModel } from "../Common/ThreeDModel";
+import ThreeDModel from "../Common/ThreeDModel";
 
 export default function Landing() {
   return (
