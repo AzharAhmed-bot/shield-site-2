@@ -13,7 +13,7 @@ export default function Landing() {
     <>
       {/* Typewriter component */}
       <div className="w-full lg:w-3/4 flex justify-center items-start py-6">
-        <div className="mx-auto w-full md:ml-20 sm:ml-3 p-8">
+        <div className="mx-auto w-full md:ml-20 sm:ml-3 p-8 lg:mt-0 mt-[-60px]">
           <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">
             Empowering Visionaries
           </h1>
@@ -29,10 +29,9 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Card component */}
-      <div className="w-full lg:w-1/4 flex items-start lg:mr-40 mt-[-34px]">
-        <div>
-          {/* Spline component */}
+      {/* Spline component */}
+      <div className="w-full lg:w-1/4 flex items-center justify-center lg:mr-40  mt-[-34px]">
+        <div>    
           <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/>
         
         </div>
