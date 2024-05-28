@@ -11,15 +11,31 @@ import python from "./assets/python.svg"
 import dart from "./assets/dart.svg";
 import webdev from "./assets/wedev.svg";
 import dbdev from "./assets/dbdev.svg";
-
+import value1 from "./assets/value1.svg";
+import value2 from "./assets/value2.svg";
+import value3 from "./assets/value3.svg";
+import value4 from "./assets/value4.svg";
+import mission from "./assets/mission.svg";
+import vision from "./assets/vission.svg";
 export interface Project {
   image: string;
   title: string;
   description: string;
 }
 
-export interface Partner {
+export interface Partners {
   image: string;
+}
+
+export interface Values {
+  image: string;
+  text:string;
+}
+
+export interface Mission{
+  image:string;
+  title:string;
+  text:string;
 }
 
 export interface Programs{
@@ -35,7 +51,7 @@ export interface Courses{
   buttonText:string;
 }
 
-export const partnershipItems: Partner[] = [
+export const partnershipItems: Partners[] = [
   {
     image: partner1
   },
@@ -46,6 +62,91 @@ export const partnershipItems: Partner[] = [
     image: partner3
   },
 ];
+
+export const values: Values[] = [
+  {
+    image: value1,
+    text:"Cooperation"
+  },
+  {
+    image: value2,
+    text:"Integrity"
+  },
+  {
+    image: value3,
+    text:"Innovation"
+  },
+  {
+    image:value4,
+    text:"Equity"
+  },
+];
+
+export const missionStatement: Mission[] = [
+  {
+    image: mission,
+    title:"Mission",
+    text:"To promote design thinking and digital transformation among youths in rural and informal settlements to help them pursue entrepreneurship and employment opportunities with the goal of breaking the poverty barrier in their communities.",
+
+  },
+  {
+    image: vision,
+    title:"Vision",
+    text:"To promote design thinking and digital transformation among youths in rural and informal settlements to help them pursue entrepreneurship and employment opportunities with the goal of breaking the poverty barrier in their communities."
+  },
+];
+
+export const partnersData = [
+  {
+    id: 1,
+    title: "Impack Week",
+    description: "We are an impact organization whose goal is to drive transformative change for youth in Africa by empowering them with relevant Entrepreneurial and Tech skills through the provision of quality and decentralized training.",
+  },
+  {
+    id: 2,
+    title: "Help Aliance",
+    description: "Founded in 1999 by Lufthansa Group employees, help alliance – since 2017 as a non-profit limited liability company under the umbrella of the Lufthansa Group – is engaged worldwide in giving young people access to education and enabling them to lead a self-determined life.",
+  },
+  {
+    id: 3,
+    title: "Tui Care Foundation",
+    description: "TUI Care Foundation harnesses tourism to create opportunities for youth and support thriving global destinations. By linking travelers to worthy causes, we promote education, child and youth welfare, environmental protection, and the positive impact of tourism worldwide.",
+  },
+  {
+    id: 4,
+    title: "Waweza Movement",
+    description: "Waweza Movement rescues and develops forgotten communities through sustainable projects. We provide safety, restoration, spiritual enrichment, and skills training to lift people out of poverty. Our mission is to restore dignity, share Jesus' love, and empower individuals to help others.",
+  },
+];
+
+export const teamData=[
+  {
+    image:partner2,
+    name:"James Mugabe",
+    title:"Co-founder, Managing Director",
+  },
+  {
+    image:partner2,
+    name:"David Kiai",
+    title:"Co-founder,CEO",
+  },
+  {
+    image:partner2,
+    name:"Eric Murithi",
+    title:"Co-founder, CTO",
+  },
+  {
+    image:partner2,
+    name:"Collins Wanga",
+    title:"Co-founder, Managing Director",
+  },
+  {
+    image:partner2,
+    name:"Wahome Theuri",
+    title:"Co-founder, Managing Director",
+  }
+]
+
 
 export  const navLinks = [
     { to: '/', label: 'Home' },

@@ -1,5 +1,4 @@
-import ThreeDModel from "../Common/ThreeDModel";
-
+import aboutus from "../../assets/pngs/aboutus.png";
 export default function Landing() {
   return (
     <>
@@ -8,7 +7,7 @@ export default function Landing() {
         {/* 3D Model */}
         <div className="w-auto lg:ml-0  lg:w-1/2 flex justify-center  lg:justify-start  lg:mt-0">
           <div className="w-full lg:w-auto">
-            {/* <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" /> */}
+            <img src={aboutus} alt="About us image" />
           </div>
         </div>
 
@@ -16,10 +15,10 @@ export default function Landing() {
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start  text-center lg:text-left py-6">
           <div className="w-full max-w-lg lg:max-w-none">
             <h1 className="lg:text-2xl text-5xl font-extrabold text-yellow-600 mb-6">
-              ~ WHAT WE OFFER
+              ~ WHO WE ARE
             </h1>
             <h2 className="text-6xl mt-6 text-gray-600 mb-4">
-              We offer digital certifications
+              We help young entrepreneurs
             </h2>
             <h2 className="text-2xl mt-6 text-gray-600 mb-4">
               SHIELD empowers rural youth with skills and resources to become entrepreneurs and solve community problems, creating jobs and positive change. Join the revolution!

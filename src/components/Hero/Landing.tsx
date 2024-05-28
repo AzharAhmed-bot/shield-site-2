@@ -32,7 +32,7 @@ export default function Landing() {
       {/* Spline component */}
       <div className="w-full lg:w-1/4 flex items-center justify-center lg:mr-40  mt-[-34px]">
         <div>    
-          <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/>
+          {/* <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/> */}
         
         </div>
       </div>
