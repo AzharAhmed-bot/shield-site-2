@@ -1,9 +1,11 @@
 import Landing from "./Landing";
 import CompanyValues from "./CompanyValues";
+import Team from "./Team";
 import CompanyMission from "./CompanyMission";
 import { values } from "../../constants";
 import { missionStatement } from "../../constants";
 import Partners from "./Partners";
+import Footer from "../Common/Footer";
 
 export default function AboutUs() {
     return (
@@ -24,6 +26,12 @@ export default function AboutUs() {
 
             {/* Partners */}
             <Partners/>
+
+            {/* Team */}
+            <Team/>
+
+            {/* Footer */}
+            <Footer/>
         </>
     );
 }

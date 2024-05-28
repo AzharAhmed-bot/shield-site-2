@@ -17,6 +17,8 @@ import value3 from "./assets/value3.svg";
 import value4 from "./assets/value4.svg";
 import mission from "./assets/mission.svg";
 import vision from "./assets/vission.svg";
+
+
 export interface Project {
   image: string;
   title: string;
@@ -138,12 +140,12 @@ export const teamData=[
   {
     image:partner2,
     name:"Collins Wanga",
-    title:"Co-founder, Managing Director",
+    title:"Software Engineer",
   },
   {
     image:partner2,
     name:"Wahome Theuri",
-    title:"Co-founder, Managing Director",
+    title:"Data Analyst",
   }
 ]
 
