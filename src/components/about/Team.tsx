@@ -5,7 +5,7 @@ const Team = () => {
   return (
     <>
     <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mt-20 ml-12">
-        Our <br /> Partners
+        Our <br /> Team
       </h1>
     <div className="flex flex-wrap justify-center mt-10">
       {teamData.map((member, index) => (

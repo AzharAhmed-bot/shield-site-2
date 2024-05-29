@@ -17,6 +17,11 @@ import value3 from "./assets/value3.svg";
 import value4 from "./assets/value4.svg";
 import mission from "./assets/mission.svg";
 import vision from "./assets/vission.svg";
+import member1 from "./assets/member1.png";
+import member2 from "./assets/member2.png";
+import member3 from "./assets/member3.png";
+import member4 from "./assets/member4.png";
+import member5 from "./assets/member5.png";
 
 
 export interface Project {
@@ -123,27 +128,27 @@ export const partnersData = [
 
 export const teamData=[
   {
-    image:partner2,
+    image:member1,
     name:"James Mugabe",
     title:"Co-founder, Managing Director",
   },
   {
-    image:partner2,
+    image:member2,
     name:"David Kiai",
     title:"Co-founder,CEO",
   },
   {
-    image:partner2,
+    image:member3,
     name:"Eric Murithi",
     title:"Co-founder, CTO",
   },
   {
-    image:partner2,
+    image:member4,
     name:"Collins Wanga",
     title:"Software Engineer",
   },
   {
-    image:partner2,
+    image:member5,
     name:"Wahome Theuri",
     title:"Data Analyst",
   }
