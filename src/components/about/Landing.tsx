@@ -17,7 +17,7 @@ export default function Landing() {
             <h1 className="lg:text-2xl text-5xl font-extrabold text-yellow-600 mb-6">
               ~ WHO WE ARE
             </h1>
-            <h2 className="text-6xl mt-6 text-gray-600 mb-4">
+            <h2 className="lg:text-6xl text-5xl mt-6 text-gray-600 mb-4">
               We help young entrepreneurs
             </h2>
             <h2 className="text-2xl mt-6 text-gray-600 mb-4">

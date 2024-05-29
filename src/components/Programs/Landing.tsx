@@ -15,10 +15,10 @@ export default function Landing() {
         {/* Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start  text-center lg:text-left py-6">
           <div className="w-full max-w-lg lg:max-w-none">
-            <h1 className="lg:text-2xl text-5xl font-extrabold text-yellow-600 mb-6">
+            <h1 className="lg:text-2xl text-1xl font-extrabold text-yellow-600 mb-6">
               ~ WHAT WE OFFER
             </h1>
-            <h2 className="text-6xl mt-6 text-gray-600 mb-4">
+            <h2 className="lg:text-2xl text-5xl  mt-6 text-gray-600 mb-4">
               We offer digital certifications
             </h2>
             <h2 className="text-2xl mt-6 text-gray-600 mb-4">

@@ -190,6 +190,7 @@ export const typewriterWords: string[] = ["A Nexus of Innovation, Entrepreneursh
 export const footerSections = [
     {
         title: "Reach Us",
+        hidden:false,
         content: [
             { text: "1234 Main Street, Anytown, CA 12345" },
             { text: "Phone: 123-456-7890" }
@@ -198,6 +199,7 @@ export const footerSections = [
     },
     {
         title: "Company",
+        hidden:true,
         content: [
             { text: "About" },
             { text: "Contact" },
@@ -206,6 +208,7 @@ export const footerSections = [
     },
     {
         title: "Legal",
+        hidden:true,
         content: [
             { text: "Privacy Policy" },
             { text: "Terms and Services" },
@@ -215,6 +218,7 @@ export const footerSections = [
     },
     {
         title: "Quick Links",
+        hidden:false,
         content: [
             { text: "Home" },
             { text: "Solutions" },

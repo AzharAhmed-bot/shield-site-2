@@ -29,7 +29,7 @@ const Typewriter = ({ words }:TypewriterProps) => {
   }
 
   return (
-    <h2 className="text-3xl text-gray-700 mb-6 transition-all duration-500 ease-in-out">
+    <h2 className="text-3xl text-gray-200 mb-6 transition-all duration-500 ease-in-out">
       {text}<span className="blink-cursor">|</span>
     </h2>
   );
