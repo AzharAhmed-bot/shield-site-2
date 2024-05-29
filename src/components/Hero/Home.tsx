@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Opportunity from './Opportunity';
 import Footer from '../Common/Footer';
 import project1 from "../../assets/project1.jpg";
@@ -17,6 +18,11 @@ const images = [project1, project2, project3, project4];
 const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const { ref, inView } = useInView({
+    threshold: 0.5, 
+    triggerOnce: false 
+  });
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -29,11 +35,13 @@ const Home: React.FC = () => {
     <div className="bg-white w-full">
       <div className="relative flex flex-col-reverse lg:flex-row min-h-screen font-sans lg:pt-20">
         {/* Background image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out" 
+        <div
+          ref={ref}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
+            inView ? 'opacity-100' : 'opacity-40' // Apply opacity based on whether in view or not
+          }`}
           style={{
             backgroundImage: `url(${images[currentImageIndex]})`,
-            opacity: 1
           }}
         ></div>
         {/* Overlay */}
@@ -46,7 +54,7 @@ const Home: React.FC = () => {
 
       {/* Company description */}
       <CompanyDescription />
-    
+
       {/* Partnership items */}
       <div className="flex flex-col-reverse lg:mt-24 lg:bg-gray-200 lg:flex-row min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
         {partnershipItems.map((partner, index) => (
@@ -60,7 +68,7 @@ const Home: React.FC = () => {
           <Card key={index} {...card} />
         ))}
       </div>
-      
+
       {/* Shield solutions */}
       <ShieldSolutions />
 
