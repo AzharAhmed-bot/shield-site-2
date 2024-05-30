@@ -19,8 +19,8 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      {routes.map((route)=>{
-        return <Route path={route.path} element={route.component} />
+      {routes.map((route,index)=>{
+        return <Route key={index} path={route.path} element={route.component} />
       })}
     </Routes>
 

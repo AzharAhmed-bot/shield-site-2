@@ -5,8 +5,8 @@ import project2 from "./assets/pngs/project2.jpg";
 import project3 from "./assets/pngs/project3.jpg";
 import project4 from "./assets/pngs/project1.jpg";
 import partner1 from "./assets/pngs/partner1.png";
-import partner2 from "./assets/pngs/partner1.png";
-import partner3 from "./assets/pngs/partner1.png";
+import partner2 from "./assets/pngs/partner2.png";
+import partner3 from "./assets/pngs/partner3.png";
 import partner4 from "./assets/pngs/partner4.png";
 import python from "./assets/svgs/python.svg"
 import dart from "./assets/svgs/dart.svg";
