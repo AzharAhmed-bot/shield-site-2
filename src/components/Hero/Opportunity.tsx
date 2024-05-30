@@ -1,4 +1,4 @@
-import programs from "../../assets/programs.png"
+import programs from "../../assets/pngs/programs.png";
 
 
 const Opportunity=()=>{

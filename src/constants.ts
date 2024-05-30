@@ -1,27 +1,28 @@
 // Data.ts
-import shieldLogo from "./assets/shieldLogo.png";
-import project1 from "./assets/project1.jpg";
-import project2 from "./assets/project2.jpg";
-import project3 from "./assets/project3.jpg";
-import project4 from "./assets/project4.jpg";
-import partner1 from "./assets/partner1.png";
-import partner2 from "./assets/partner2.png";
-import partner3 from "./assets/partner3.png";
-import python from "./assets/python.svg"
-import dart from "./assets/dart.svg";
-import webdev from "./assets/wedev.svg";
-import dbdev from "./assets/dbdev.svg";
-import value1 from "./assets/value1.svg";
-import value2 from "./assets/value2.svg";
-import value3 from "./assets/value3.svg";
-import value4 from "./assets/value4.svg";
-import mission from "./assets/mission.svg";
-import vision from "./assets/vission.svg";
-import member1 from "./assets/member1.png";
-import member2 from "./assets/member2.png";
-import member3 from "./assets/member3.png";
-import member4 from "./assets/member4.png";
-import member5 from "./assets/member5.png";
+import shieldLogo from "./assets/pngs/shieldLogo.png";
+import project1 from "./assets/pngs/project1.jpg";
+import project2 from "./assets/pngs/project2.jpg";
+import project3 from "./assets/pngs/project3.jpg";
+import project4 from "./assets/pngs/project1.jpg";
+import partner1 from "./assets/pngs/partner1.png";
+import partner2 from "./assets/pngs/partner1.png";
+import partner3 from "./assets/pngs/partner1.png";
+import partner4 from "./assets/pngs/partner4.png";
+import python from "./assets/svgs/python.svg"
+import dart from "./assets/svgs/dart.svg";
+import webdev from "./assets/svgs/wedev.svg";
+import dbdev from "./assets/svgs/dbdev.svg";
+import value1 from "./assets/svgs/value1.svg";
+import value2 from "./assets/svgs/value2.svg";
+import value3 from "./assets/svgs/value3.svg";
+import value4 from "./assets/svgs/value4.svg";
+import mission from "./assets/svgs/mission.svg";
+import vision from "./assets/svgs/vission.svg";
+import member1 from "./assets/pngs/member1.png";
+import member2 from "./assets/pngs/member2.png";
+import member3 from "./assets/pngs/member3.png";
+import member4 from "./assets/pngs/member4.png";
+import member5 from "./assets/pngs/member5.png";
 
 
 export interface Project {
@@ -68,6 +69,9 @@ export const partnershipItems: Partners[] = [
   {
     image: partner3
   },
+  {
+    image:partner4
+  }
 ];
 
 export const values: Values[] = [

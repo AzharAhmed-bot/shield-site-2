@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import shieldLogo from "../assets/shieldLogo.png";
+import shieldLogo from "../assets/pngs/shieldLogo.png";
 import { navLinks } from '../constants';
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
