@@ -2,6 +2,7 @@ import Home from "./Hero/Home";
 import Program from "./Programs/Program";
 import AboutUs from "./about/AboutUs";
 import Payment from "./payment/Payment";
+import PaymentFields from "./payment/PaymentField";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 
@@ -11,7 +12,7 @@ function App() {
         { component: <Home />, path: "/" },
         { component: <Program />, path: "/programs" },
         { component: <AboutUs />, path: "/about" },
-        // { component: <PaymentInput />, path: "/payment" },
+        { component: <PaymentFields />, path: "/payment" },
         
     ];
 
