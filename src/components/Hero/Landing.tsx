@@ -1,13 +1,18 @@
 import Typewrite from "./TypeWrite";
 import { typewriterWords } from "../../constants";
 import ThreeDModel from "../Common/ThreeDModel";
+import { useNavigate } from "react-router-dom";
 import Button from "../Button";
 
 
 
 
 export default function Landing() {
+   const navigate=useNavigate()
 
+   function handleDonate(){
+    navigate("/payment")
+   }
 
   return (
     <>
@@ -24,6 +29,7 @@ export default function Landing() {
           <Button
             name="Donate now!"
             style="bg-yellow-500 mt-6 text-white text-lg font-bold py-3 px-6 rounded-xl hover:bg-yellow-800 transition duration-300 ease-in-out"
+            onClick={handleDonate}
           />
           <div className="underline-animation mt-12"></div>
         </div>
