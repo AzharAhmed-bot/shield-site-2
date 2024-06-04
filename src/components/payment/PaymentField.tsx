@@ -2,6 +2,9 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import project1 from "../../assets/pngs/project1.jpg";
 import paystack from "../../assets/pngs/paystack.png";
 import { PaystackConsumer } from 'react-paystack';
+import { values } from '../../constants';
+
+
 
 interface FormState {
   firstname: string;
@@ -39,14 +42,26 @@ const PaymentFields: React.FC = () => {
     console.log('Payment Closed');
   }
 
-  const payStackProps = {
+  const config={
     reference: new Date().getTime().toString(),
     email: form.email,
     amount: form.amount,
+  }
+  const payStackProps = {
+    ...config,
     publicKey: 'pk_test_8a8e88068f3dfcb45bd681338ebae14496885f39',
     text: "Donate",
     onSuccess: onSuccess,
     onClose: onClose,
+    metaData:{
+        customFields:[
+            {
+                display_name:form.firstname,
+                value:form.amount
+            }
+        ]
+    }
+    
     
   };
 
@@ -62,18 +77,18 @@ const PaymentFields: React.FC = () => {
           <div className="w-full md:w-1/2 lg:w-1/2 p-6 bg-gray-100 shadow-lg rounded-r-lg">
             <h2 className="text-2xl font-semibold text-center mb-6">Enter Payment Details</h2>
             <form onSubmit={handlePay}>
-              <div className="mb-4">
-                <label htmlFor="firstname" className="block text-gray-700 font-medium mb-2">First Name</label>
+              <div className="mb-8">
+                <label htmlFor="firstname" className="block  text-gray-700 font-bold mb-2">First Name</label>
                 <input
                   type="text"
                   id="firstname"
                   name="firstname"
-                  className="w-full h-10 px-4 py-2 bg-white rounded-3xl border-b border-black gap-2.5"
+                  className="w-full h-10 px-4 py-2 bg-white rounded-3xl border-b border-black mb-4"
                   value={form.firstname}
                   onChange={onChange}
                   required
                 />
-                <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">Last Name</label>
+                <label htmlFor="lastName" className="block text-gray-700 font-bold  mb-2">Last Name</label>
                 <input
                   type="text"
                   id="lastName"
@@ -84,8 +99,8 @@ const PaymentFields: React.FC = () => {
                   required
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email Address</label>
+              <div className="mb-8">
+                <label htmlFor="email" className="block text-gray-700 font-bold  mb-2">Email Address</label>
                 <input
                   type="email"
                   id="email"
@@ -96,8 +111,8 @@ const PaymentFields: React.FC = () => {
                   required
                 />
               </div>
-              <div className="mb-4">
-                <label htmlFor="amount" className="block text-gray-700 font-medium mb-2">Amount (KES)</label>
+              <div className="mb-8">
+                <label htmlFor="amount" className="block text-gray-700 font-bold  mb-2">Amount (KES)</label>
                 <input
                   type="number"
                   id="amount"

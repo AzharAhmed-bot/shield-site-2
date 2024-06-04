@@ -150,11 +150,6 @@ export const teamData=[
     image:member4,
     name:"Collins Wanga",
     title:"Software Engineer",
-  },
-  {
-    image:member5,
-    name:"Wahome Theuri",
-    title:"Data Analyst",
   }
 ]
 

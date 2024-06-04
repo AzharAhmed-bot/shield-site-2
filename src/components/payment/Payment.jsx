@@ -30,7 +30,7 @@ const Payment = () => {
     };
 
     return (
-        <div className="fixed bottom-5 right-5 z-50 flex items-center justify-center">
+        <div className="fixed bottom-5 left-5 z-50 flex items-center justify-center">
             <PayPalScriptProvider options={initialOptions}>
                 <PayPalButtons
                     style={{ layout: "horizontal", height: 50 }}

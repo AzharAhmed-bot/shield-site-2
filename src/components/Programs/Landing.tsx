@@ -14,7 +14,7 @@ export default function Landing() {
         {/* 3D Model */}
         <div className="w-auto lg:ml-0  lg:w-1/2 flex justify-center  lg:justify-start  lg:mt-0">
           <div className="w-full lg:w-auto">
-            {/* <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" /> */}
+            <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" />
           </div>
         </div>
 
