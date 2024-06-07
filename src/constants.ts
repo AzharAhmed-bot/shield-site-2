@@ -22,7 +22,6 @@ import member1 from "./assets/pngs/member1.png";
 import member2 from "./assets/pngs/member2.png";
 import member3 from "./assets/pngs/member3.png";
 import member4 from "./assets/pngs/member4.png";
-import member5 from "./assets/pngs/member5.png";
 
 
 export interface Project {
@@ -158,7 +157,7 @@ export  const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
-    { to: '/shield-learn', label: 'Sheild Learn' },
+    // { to: '/shield-learn', label: 'Sheild Learn' },
   ];
 
 export const cardContent: Project[] = [

@@ -2,9 +2,11 @@ import Home from "./Hero/Home";
 import Program from "./Programs/Program";
 import AboutUs from "./about/AboutUs";
 import Payment from "./payment/Payment";
-import PaymentFields from "./payment/PaymentField";
+import ComingSoon from "./payment/ComingSoon";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
+
+
 
 
 function App() {
@@ -12,9 +14,12 @@ function App() {
         { component: <Home />, path: "/" },
         { component: <Program />, path: "/programs" },
         { component: <AboutUs />, path: "/about" },
-        { component: <PaymentFields />, path: "/payment" },
+        { component: <ComingSoon />, path: "/payment" },
         
     ];
+
+    const clientId = import.meta.env.REACT_APP_CLIENT_ID;
+    console.log(clientId);
 
     return (
         <>
