@@ -1,14 +1,11 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { client_id,amount,intent,currency,shipping_preference } from "../../temp";
+import { client_id, amount, intent, currency, shipping_preference } from "../../temp";
 
 const Payment = () => {
-    
-    
-    
     const initialOptions = {
-        clientId: client_id,
+        "client-id": client_id, // Corrected key to "client-id"
         currency: currency,
-        intent: intent
+        intent: intent,
     };
 
     const createOrder = (data, actions) => {

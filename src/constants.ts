@@ -8,6 +8,7 @@ import partner1 from "./assets/pngs/partner1.png";
 import partner2 from "./assets/pngs/partner2.png";
 import partner3 from "./assets/pngs/partner3.png";
 import partner4 from "./assets/pngs/partner4.png";
+import partner5 from "./assets/pngs/partner5.png";
 import python from "./assets/svgs/python.svg"
 import dart from "./assets/svgs/dart.svg";
 import webdev from "./assets/svgs/wedev.svg";
@@ -50,12 +51,14 @@ export interface Programs{
   description:string;
   image:string;
   alt:string;
-  reverse:boolean
+  reverse:boolean;
+  url:string;
 }
 export interface Courses{
   title: string;
   image:string;
   buttonText:string;
+  url:string;
 }
 
 export const partnershipItems: Partners[] = [
@@ -69,9 +72,13 @@ export const partnershipItems: Partners[] = [
     image: partner3
   },
   {
+    image:partner5
+  },
+  {
     image:partner4
-  }
+  },
 ];
+
 
 export const values: Values[] = [
   {
@@ -157,7 +164,7 @@ export  const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
-    // { to: '/shield-learn', label: 'Sheild Learn' },
+    { to: 'https://shieldintl.org/academy/', label: 'Sheild Learn' },
   ];
 
 export const cardContent: Project[] = [
@@ -233,6 +240,7 @@ export const programs:Programs[] = [
     image: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     alt: "Design Thinking School",
     reverse: false,
+    url:"https://shieldintl.org/academy/"
   },
   {
     title: "SHIELD Entrepreneur",
@@ -241,6 +249,7 @@ export const programs:Programs[] = [
     image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     alt: "SHIELD Entrepreneur",
     reverse: true,
+    url:"https://shieldintl.org/academy/"
   },
 ];
 
@@ -248,21 +257,25 @@ export const courses:Courses[]=[
   {
    title:"Dart with fluttler",
    image:dart,
-   buttonText:"Enroll now!"
+   buttonText:"Enroll now!",
+   url:"https://shieldintl.org/academy/"
   },
   {
     title:"Python programming",
     image:python,
-    buttonText:"Enroll now!"
+    buttonText:"Enroll now!",
+    url:"https://shieldintl.org/academy/"
    },
    {
     title:"Web development",
     image:webdev,
-    buttonText:"Enroll now!"
+    buttonText:"Enroll now!",
+    url:"https://shieldintl.org/academy/"
    },
    {
     title:"Database development",
     image:dbdev,
-    buttonText:"Enroll now!"
+    buttonText:"Enroll now!",
+    url:"https://shieldintl.org/academy/"
    }
 ]

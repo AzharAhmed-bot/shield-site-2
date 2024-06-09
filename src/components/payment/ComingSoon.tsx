@@ -15,7 +15,7 @@ const ComingSoon = () => {
         <p className="text-xl text-gray-600">
           We are working hard to bring you some new payment using paystack. Stay tuned!
         </p>
-        <p>Use the paypal payment method<span className="font-bold ">Below</span></p>
+        <p>Use the paypal payment method<span className="font-bold "> Below</span></p>
       </div>
     </div>
   );

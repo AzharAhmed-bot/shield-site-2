@@ -56,7 +56,7 @@ const Home: React.FC = () => {
       <CompanyDescription />
 
       {/* Partnership items */}
-      <div className="flex flex-col-reverse lg:mt-24 lg:bg-gray-200 lg:flex-row min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
+      <div className="flex flex-col lg:mt-24 mt-12 bg-gray-200 lg:flex-row min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
         {partnershipItems.map((partner, index) => (
           <Partnership key={index} {...partner} />
         ))}

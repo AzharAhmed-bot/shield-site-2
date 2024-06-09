@@ -1,13 +1,14 @@
 // PartnershipItem.tsx
+
 interface PartnershipItemProps {
   image: string;
 }
 
-const Partnership = ({ image }:PartnershipItemProps) => {
+const Partnership = ({ image }: PartnershipItemProps) => {
   return (
-    <div className="flex items-center justify-center mt-6 m-20">
-      <div className="p-4  rounded-lg">
-        <img className="lg:h-20 lg:w-36 h-auto w-auto" src={image} alt="Partners" />
+    <div className="flex  mt-6 m-20 ml-8">
+      <div className="p-4 h-20 w-32 rounded-lg">
+        <img className="h-12 w-36 " src={image} alt="Partners" />
       </div>
     </div>
   );

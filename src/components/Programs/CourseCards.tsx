@@ -1,7 +1,9 @@
 import { courses } from "../../constants";
 import Button from "../Button";
+import { useNavigate } from 'react-router-dom';
 
 export default function CourseCards() {
+  const navigate=useNavigate();
   return (
     <>
       <h1 className="lg:text-5xl text-5xl lg:ml-28 ml-4 font-extrabold text-gray-900 mb-12">
@@ -28,6 +30,7 @@ export default function CourseCards() {
               </h2>
               <Button
                 name={course.buttonText}
+                // onClick={()=>navigate(course.url)}
                 style="bg-white text-[#003445] py-2 px-6 rounded-xl"
               />
             </div>
