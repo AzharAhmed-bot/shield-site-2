@@ -1,14 +1,15 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { client_id, amount, intent, currency, shipping_preference } from "../../temp";
+import { clientId, amount, intent, currency, shippingPreference } from "../../temp";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Payment = () => {
     const initialOptions = {
-        "client-id": client_id, // Corrected key to "client-id"
+        clientId:clientId,
         currency: currency,
         intent: intent,
     };
 
-    const createOrder = (data, actions) => {
+    const createOrder = (actions) => {
         return actions.order.create({
             purchase_units: [{
                 amount: {
@@ -16,19 +17,21 @@ const Payment = () => {
                 }
             }],
             application_context: {
-                shipping_preference: shipping_preference
+                shipping_preference: shippingPreference
             }
         });
     }
+    
 
-    const onApprove = (data, actions) => {
+    const onApprove = (actions) => {
         return actions.order.capture().then(details => {
-            alert("Transaction completed by " + details.payer.name.given_name);
+            toast.success("Transaction completed by " + details.payer.name.given_name);
         });
     };
 
     return (
         <div className="fixed bottom-5 left-5 z-50 flex items-center justify-center">
+            <Toaster />
             <PayPalScriptProvider options={initialOptions}>
                 <PayPalButtons
                     style={{ layout: "horizontal", height: 45 }}

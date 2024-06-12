@@ -1,6 +1,5 @@
 import Typewrite from "./TypeWrite";
 import { typewriterWords } from "../../constants";
-import ThreeDModel from "../Common/ThreeDModel";
 import { useNavigate } from "react-router-dom";
 import Button from "../Button";
 
@@ -34,14 +33,6 @@ export default function Landing() {
           <div className="underline-animation mt-12"></div>
         </div>
       </div>
-
-      {/* Spline component */}
-      {/* <div className="w-full lg:w-1/4 flex items-center justify-center lg:mr-40  mt-[-34px]">
-        <div>    
-          
-        
-        </div>
-      </div> */}
     </>
   );
 }

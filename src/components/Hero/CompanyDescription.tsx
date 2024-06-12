@@ -1,4 +1,3 @@
-import design from "../../assets/design.png";
 import ThreeDModel from "../Common/ThreeDModel";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";

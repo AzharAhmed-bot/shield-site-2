@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import project1 from "../../assets/pngs/project1.jpg";
 import paystack from "../../assets/pngs/paystack.png";
 import { PaystackConsumer } from 'react-paystack';
-import { values } from '../../constants';
+
 
 
 

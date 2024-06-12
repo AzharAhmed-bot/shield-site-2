@@ -1,9 +1,8 @@
 import { courses } from "../../constants";
 import Button from "../Button";
-import { useNavigate } from 'react-router-dom';
+
 
 export default function CourseCards() {
-  const navigate=useNavigate();
   return (
     <>
       <h1 className="lg:text-5xl text-5xl lg:ml-28 ml-4 font-extrabold text-gray-900 mb-12">
