@@ -1,5 +1,5 @@
 import { courses } from "../../constants";
-import Button from "../Button";
+import Button from "../Common/Button";
 
 
 export default function CourseCards() {

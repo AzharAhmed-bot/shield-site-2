@@ -4,7 +4,7 @@ import AboutUs from "./about/AboutUs";
 import Payment from "./payment/Payment";
 import ComingSoon from "./payment/ComingSoon";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./Common/Navbar";
 
 
 

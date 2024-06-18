@@ -1,6 +1,6 @@
 // Card.tsx
 import React, { useState } from 'react';
-import Button from '../Button';
+import Button from '../Common/Button';
 import Overlay from '../Common/Overlay';
 
 interface CardProps {

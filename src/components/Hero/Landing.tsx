@@ -1,7 +1,7 @@
 import Typewrite from "./TypeWrite";
 import { typewriterWords, statistics } from "../../constants";
 import { useNavigate } from "react-router-dom";
-import Button from "../Button";
+import Button from "../Common/Button";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ export default function Landing() {
   return (
     <div className="w-full lg:w-3/4 mx-auto flex flex-col items-center">
       {/* Typewriter Section */}
-      <div className="w-full p-8 lg:mt-0 mt-[-60px] flex flex-col items-center">
-        <h1 className="text-5xl lg:text-6xl font-extrabold text-white mb-6">
+      <div className="w-full p-8  flex flex-col items-center">
+        <h1 className="text-5xl lg:text-6xl font-extrabold text-white mb-6 ">
           Empowering Visionaries
         </h1>
         <Typewrite words={typewriterWords} />

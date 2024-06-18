@@ -228,8 +228,8 @@ export const footerSections = [
         title: "Reach Us",
         hidden:false,
         content: [
-            { text: "1234 Main Street, Anytown, CA 12345" },
-            { text: "Phone: 123-456-7890" }
+            { text: "Olympic estate, Court 2, House 1" },
+            { text: "Phone: +254 700 366137" }
         ],
         image: shieldLogo
     },
@@ -238,7 +238,6 @@ export const footerSections = [
         hidden:true,
         content: [
             { text: "About" },
-            { text: "Contact" },
             { text: "Blog" }
         ]
     },
