@@ -23,6 +23,10 @@ import member1 from "./assets/pngs/member1.png";
 import member2 from "./assets/pngs/member2.png";
 import member3 from "./assets/pngs/member3.png";
 import member4 from "./assets/pngs/member4.png";
+import testimonial1 from "./assets/pngs/testimonial1.png";
+import testimonial2 from "./assets/pngs/testimonial2.png";
+import testimonial3 from "./assets/pngs/testimonial3.png";
+
 
 
 export interface Project {
@@ -60,6 +64,34 @@ export interface Courses{
   buttonText:string;
   url:string;
 }
+
+export const statistics = [
+  { value: "1,500+", label: "Entrepreneurs Supported" },
+  { value: "300+", label: "Projects Funded" },
+  { value: "120", label: "Communities Impacted" },
+  { value: "50+", label: "Mentors Engaged" },
+];
+export const testimonials = [
+  {
+    quote: "SHIELD has been instrumental in supporting my entrepreneurial journey. Their mentorship and resources have helped me navigate challenges and grow my ideas.",
+    name: "John Doe",
+    image: testimonial1,
+    title: "Student"
+  },
+  {
+    quote: "I've benefited greatly from SHIELD's network and opportunities. They've provided me with the support I need to pursue my projects and make a real impact.",
+    name: "Jane Smith",
+    image: testimonial2,
+    title: "Student"
+  },
+  {
+    quote: "Being part of SHIELD has been a game-changer for me. The community here is vibrant, and the resources available are unmatched.",
+    name: "Sam Wilson",
+    image: testimonial3,
+    title: "Student"
+  }
+];
+
 
 export const partnershipItems: Partners[] = [
   {
@@ -161,7 +193,6 @@ export const teamData=[
 
 
 export  const navLinks = [
-    { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
     { to: 'https://shieldintl.org/academy/', label: 'Sheild Learn' },

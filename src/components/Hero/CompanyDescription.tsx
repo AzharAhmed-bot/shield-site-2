@@ -30,7 +30,7 @@ export default function CompanyDescription() {
           isVisible ? "slide-in" : ""
         }`}
       >
-        <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/>
+        {/* <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/> */}
       </div>
       <div className="lg:mr-20 text-center lg:text-left">
 

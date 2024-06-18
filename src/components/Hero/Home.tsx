@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import Opportunity from './Opportunity';
 import Footer from '../Common/Footer';
 import project1 from "../../assets/pngs/project1.jpg";
-import project2 from "../../assets/pngs/project1.jpg";
-import project3 from "../../assets/pngs/project1.jpg";
-import project4 from "../../assets/pngs/project1.jpg";
+import project2 from "../../assets/pngs/project2.jpg";
+import project3 from "../../assets/pngs/project3.jpg";
+import project4 from "../../assets/pngs/project4.jpg";
+import Testimonials from "./Testimonials";
 import ShieldSolutions from './SheildSolutions';
 import CompanyDescription from './CompanyDescription';
 import Card from './Card';
-import Partnership from './Partnership';
-import { partnershipItems, cardContent } from '../../constants';
+import PartnershipItem from './Partnership';
 import Landing from "./Landing";
+import { partnershipItems, cardContent } from '../../constants';
 
 const images = [project1, project2, project3, project4];
 
@@ -19,8 +19,8 @@ const Home: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const { ref, inView } = useInView({
-    threshold: 0.5, 
-    triggerOnce: false 
+    threshold: 0.5,
+    triggerOnce: false
   });
 
   useEffect(() => {
@@ -32,21 +32,21 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-white w-full">
+    <div className="bg-white">
       <div className="relative flex flex-col-reverse lg:flex-row min-h-screen font-sans lg:pt-20">
         {/* Background image */}
         <div
           ref={ref}
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out ${
-            inView ? 'opacity-100' : 'opacity-40' // Apply opacity based on whether in view or not
+            inView ? 'opacity-100' : 'opacity-40'
           }`}
           style={{
             backgroundImage: `url(${images[currentImageIndex]})`,
           }}
         ></div>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        {/* First view port content */}
+        {/* Colored overlay with opacity */}
+        <div className="absolute inset-0 bg-[#003445] opacity-70"></div>
+        {/* First viewport content */}
         <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full h-full">
           <Landing />
         </div>
@@ -56,10 +56,12 @@ const Home: React.FC = () => {
       <CompanyDescription />
 
       {/* Partnership items */}
-      <div className="flex flex-col lg:mt-24 mt-12 bg-gray-200 lg:flex-row min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
-        {partnershipItems.map((partner, index) => (
-          <Partnership key={index} {...partner} />
-        ))}
+      <div className="flex flex-col lg:mt-24 mt-12 bg-black min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-8 p-4 lg:p-0">
+          {partnershipItems.map((partner, index) => (
+            <PartnershipItem key={index} image={partner.image} />
+          ))}
+        </div>
       </div>
 
       {/* Project items */}
@@ -72,8 +74,8 @@ const Home: React.FC = () => {
       {/* Shield solutions */}
       <ShieldSolutions />
 
-      {/* Opportunity programs */}
-      <Opportunity />
+      {/* Testimonials */}
+      <Testimonials />
 
       {/* Footer */}
       <Footer />
