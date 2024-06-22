@@ -1,9 +1,27 @@
 // ShieldSolutions.tsx
-
+import { useEffect, useState } from "react";
 
 const ShieldSolutions = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const testimonialSection = document.getElementById('company-section');
+      if (testimonialSection) {
+        const top = testimonialSection.getBoundingClientRect().top;
+        setIsVisible(top < window.innerHeight);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col items-start mt-20 ml-16">
+    <div id="company-section" className={`flex flex-col items-start mt-20 ml-16 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">Shield <br /> solutions</h1>
       <div className="relative mt-10">
         {/* Vertical Line */}

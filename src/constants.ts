@@ -2,8 +2,8 @@
 import shieldLogo from "./assets/pngs/shieldLogo.png";
 import project1 from "./assets/pngs/project1.jpg";
 import project2 from "./assets/pngs/project2.jpg";
-import project3 from "./assets/pngs/project3.jpg";
-import project4 from "./assets/pngs/project1.jpg";
+import project5 from "./assets/pngs/project5.png";
+import project6 from "./assets/pngs/project6.png";
 import partner1 from "./assets/pngs/partner1.png";
 import partner2 from "./assets/pngs/partner2.png";
 import partner3 from "./assets/pngs/partner3.png";
@@ -26,6 +26,7 @@ import member4 from "./assets/pngs/member4.png";
 import testimonial1 from "./assets/pngs/testimonial1.png";
 import testimonial2 from "./assets/pngs/testimonial2.png";
 import testimonial3 from "./assets/pngs/testimonial3.png";
+import { title } from "process";
 
 
 
@@ -66,10 +67,10 @@ export interface Courses{
 }
 
 export const statistics = [
-  { value: "1,500+", label: "Entrepreneurs Supported" },
-  { value: "300+", label: "Projects Funded" },
-  { value: "120", label: "Communities Impacted" },
-  { value: "50+", label: "Mentors Engaged" },
+  { value: "15+", label: "Entrepreneurs Supported" },
+  { value: "2", label: "Projects Funded" },
+  { value: "4+", label: "Partners Engaged" },
+  { value: "10+", label: "Mentors Engaged" },
 ];
 export const testimonials = [
   {
@@ -177,12 +178,12 @@ export const teamData=[
   {
     image:member2,
     name:"David Kiai",
-    title:"Co-founder,CEO",
+    title:"Co-founder,CIO",
   },
   {
     image:member3,
     name:"Eric Murithi",
-    title:"Co-founder, CTO",
+    title:"Co-founder, CEO",
   },
   {
     image:member4,
@@ -191,36 +192,74 @@ export const teamData=[
   }
 ]
 
+export const faqContent={
+  title:"FAQ on SHIELD PROGRAM",
+  rows:[
+    {
+    title:"How can I apply for the SHIELD program?",
+    content:"https://docs.google.com/forms/d/1NHc6Yphr_N7WxSGgOVlsoWxkFImtqy36ioERIQb7oWs"
+    },
+    {
+      title:"Will have I to pay to be trained in Design Thinking?",
+      content:"No, the course is absolutely free ⚡"
+    },
+    {
+      title:"How do I access my course?",
+      content:"You can access your course by signing in through SHIELD'S learning management platform here. You will log in with the email and password created at the time of registration."
+    },
+    {
+      title:"How many hours on average per day do I need to successfully undertake the course? ",
+      content:"You need at least 3 hours a day, on average 18 hrs a week"
+    },
+    {
+      title:"What is the procedure of undertaking the courses?",
+      content:"You choose your own procedure because It is self paced paced learning experience."
+    },
+    {
+      title:"What programs would I learn within SHIELD to make me a better entrepreneur?",
+      content:"Within SHIELD, you would learn design thinking, software development, as well as be placed into a software development program as well as be placed a pre-accelerator."
+    },
+    {
+      title:"Are the programs running physically or virtually?",
+      content:"Once you register onto the SHIELD platform, you get firsthand access to all the training modules in addition to invites to exclusive meetups where we take you through the trainings."
+    },
+    {
+      title:"What programs would I learn within Shield to make me a better entrepreneur?",
+      content:"Within SHIELD, you would learn design thinking, software development, as well as be placed into a software development program as well as be placed a pre-accelerator."
+    }
+  ]
+}
+
 
 export  const navLinks = [
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
-    { to: 'https://shieldintl.org/academy/', label: 'Sheild Learn' },
+    { to: 'https://shieldintl.org/academy/', label: 'Shield Learn' },
   ];
 
-export const cardContent: Project[] = [
-  {
-    image: project1,
-    title: "Waweza foundation",
-    description: "Fun workshop teaches problem-solving, creativity, pitching, empowering kids effectively."
-  },
-  {
-    image: project2,
-    title: "Empowering minds",
-    description: "Fun workshop teaches problem-solving, creativity, pitching, empowering kids effectively."
-  },
-  {
-    image: project3,
-    title: "Young innovators",
-    description: "Fun, interactive workshop empowers kids with problem-solving, creativity, pitching."
-  },
-  {
-    image: project4,
-    title: "Innovative youth",
-    description: "Youthful minds engage in problem-solving, creativity, and persuasive pitching."
-  }
-];
-
+  export const cardContent: Project[] = [
+    {
+      image: project1,
+      title: "Waweza Foundation",
+      description: "Empowering kids through fun workshops that teach problem-solving, creativity, and effective pitching."
+    },
+    {
+      image: project5,
+      title: "Tourist Development Program",
+      description: "Introduction to HTML elements and basics of software engineering."
+    },
+    {
+      image: project2,
+      title: "Young Innovators",
+      description: "Interactive workshops that empower kids with problem-solving skills, creativity, and pitching."
+    },
+    {
+      image: project6,
+      title: "Tourism Project",
+      description: "Real-time GPS location view and tourism destination information. Booking tour guides for new places."
+    }
+  ];
+  
 export const typewriterWords: string[] = ["A Nexus of Innovation, Entrepreneurship, and Leadership.", "A Core of Imagination, Ventures, and Vision.", "A Fusion of Inventiveness, Business Ventures, and Mentorship."];
 
 export const footerSections = [
@@ -228,8 +267,10 @@ export const footerSections = [
         title: "Reach Us",
         hidden:false,
         content: [
-            { text: "Olympic estate, Court 2, House 1" },
-            { text: "Phone: +254 700 366137" }
+            { text: "APA Arcade, 1st Floor"},
+            { text: "Phone: +254 700 366137" },
+            {text:"info@shieldint.org" }
+            
         ],
         image: shieldLogo
     },
@@ -237,18 +278,21 @@ export const footerSections = [
         title: "Company",
         hidden:true,
         content: [
+            { text: "Home" },
             { text: "About" },
-            { text: "Blog" }
+            
         ]
     },
     {
-        title: "Legal",
+        title: "Our services",
         hidden:true,
         content: [
-            { text: "Privacy Policy" },
-            { text: "Terms and Services" },
-            { text: "Terms of Use" },
-            { text: "Refund Policy" }
+            { text: "Design Thinking School" },
+            { text: "SME and Startup Training" },
+            { text: "SHIELD Developer Program" },
+            { text: "Capacity Building Programs for" },
+            { text: "startups" },
+
         ]
     },
     {
@@ -257,10 +301,14 @@ export const footerSections = [
         content: [
             { text: "Home" },
             { text: "Solutions" },
-            { text: "Projects" }
+            { text: "Projects" },
+            {text:"Programs"},
+            {text:"Partners"}
         ]
     }
 ];
+
+
 
 export const programs:Programs[] = [
   {

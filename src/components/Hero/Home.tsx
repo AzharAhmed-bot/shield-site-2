@@ -8,8 +8,10 @@ import project4 from "../../assets/pngs/project4.jpg";
 import Testimonials from "./Testimonials";
 import ShieldSolutions from './SheildSolutions';
 import CompanyDescription from './CompanyDescription';
+import Opportunity from "./Opportunity";
 import Card from './Card';
 import PartnershipItem from './Partnership';
+import FaqSection from './FaqSection';
 import Landing from "./Landing";
 import { partnershipItems, cardContent } from '../../constants';
 
@@ -55,17 +57,10 @@ const Home: React.FC = () => {
       {/* Company description */}
       <CompanyDescription />
 
-      {/* Partnership items */}
-      <div className="flex flex-col lg:mt-24 mt-12 bg-black min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
-        <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-8 p-4 lg:p-0">
-          {partnershipItems.map((partner, index) => (
-            <PartnershipItem key={index} image={partner.image} />
-          ))}
-        </div>
-      </div>
+      
 
       {/* Project items */}
-      <div className="flex flex-wrap mt-[-20px] gap-x-4 gap-y-10 items-center justify-center m-8">
+      <div className="flex flex-wrap mt-12 gap-x-4 gap-y-10 items-center justify-center m-8">
         {cardContent.map((card, index) => (
           <Card key={index} {...card} />
         ))}
@@ -76,6 +71,19 @@ const Home: React.FC = () => {
 
       {/* Testimonials */}
       <Testimonials />
+
+      <Opportunity/>
+
+      <FaqSection/>
+
+      {/* Partnership items */}
+      <div className="flex flex-col lg:mt-24 mt-12  min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
+        <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-8 p-4 lg:p-0">
+          {partnershipItems.map((partner, index) => (
+            <PartnershipItem key={index} image={partner.image} />
+          ))}
+        </div>
+      </div>
 
       {/* Footer */}
       <Footer />

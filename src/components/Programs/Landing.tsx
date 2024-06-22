@@ -16,7 +16,7 @@ export default function Landing() {
       {/* 3D Model */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:mt-0 mb-6 lg:mb-0">
         <div className="overflow-hidden">
-          <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" />
+          {/* <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" /> */}
         </div>
       </div>
 

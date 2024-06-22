@@ -1,52 +1,53 @@
-import ThreeDModel from "../Common/ThreeDModel";
-import { useInView } from "react-intersection-observer";
+import lightBulb from "../../assets/pngs/lightbulb.jpg";
 import { useEffect, useState } from "react";
 
 export default function CompanyDescription() {
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: false
-  });
-
-  // State to manage the animation
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
+    const handleScroll = () => {
+      const testimonialSection = document.getElementById('company-section');
+      if (testimonialSection) {
+        const top = testimonialSection.getBoundingClientRect().top;
+        setIsVisible(top < window.innerHeight);
+      }
+    };
 
-  const description =
-    "SHIELD empowers youth through Design Thinking, fostering innovative entrepreneurship for social change in underserved areas.";
+    // Listen to scroll events for visibility
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div
-      ref={ref}
-      className="flex flex-col-reverse lg:flex-row lg:h-80 font-sans items-center justify-center"
+      id="company-section"
+      className={`flex flex-col lg:flex-row mt-10 lg:mt-20 lg:h-80 lg:items-center lg:justify-center transition-all duration-500 ease-in-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      style={{ minHeight: '80vh', justifyContent: 'center' }}
     >
-      <div
-        className={`rounded-full lg:mr-16 lg:mt-12 lg:ml-16 ${
-          isVisible ? "slide-in" : ""
-        }`}
-      >
-        <ThreeDModel myScene="https://prod.spline.design/uasDawWwGrRkfoZE/scene.splinecode"/>
+      <div className="m-4 flex justify-center items-center lg:w-1/2 transition-transform duration-500 ease-in-out transform">
+        <img
+          src={lightBulb}
+          alt="Light Bulb"
+          className="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-lg shadow-xl border-4 border-[#003445]"
+        />
       </div>
-      <div className="lg:mr-20 text-center lg:text-left">
-
-        <h1 className="text-xl lg:text-2xl mt-16 lg:mt-4 font-extrabold text-gray-900">
-          {description.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className={`relative ml-1 ${
-                isVisible ? "animate-slide" : ""
-              }`}
-              style={{ animationDelay: `${index * 0.5}s` }}
-            >
-              {word}{" "}
-            </span>
-          ))}
-        </h1>
+      <div className="p-4 lg:mr-20 lg:w-1/2 w-full transition-opacity duration-500 ease-in-out transform">
+        <h2 className="text-3xl lg:text-5xl mt-16 lg:mt-0 font-extrabold text-[#003445]">
+          What We Do
+        </h2>
+        <h3 className="text-2xl lg:text-4xl mt-4 lg:mt-2 font-semibold text-[#003445]">
+          Company Overview
+        </h3>
+        <p className="text-lg lg:text-lg mt-6 lg:mt-8 leading-relaxed text-[#003445]">
+          SHIELD leverages Design Thinking and digital transformation to empower the youth, businesses, and community organizations to acquire the skills, knowledge, and competence required to either pursue entrepreneurship or earn employment.
+        </p>
+        <p className="text-lg lg:text-lg mt-6 lg:mt-8 leading-relaxed text-[#003445]">
+          Our goal is to create design thinkers and entrepreneurs who can collaborate to solve social problems experienced in the slums and rural areas and in the process inspire even more fellow youths to join the movement thus bringing about a ripple effect of positive change in their communities.
+        </p>
       </div>
     </div>
   );

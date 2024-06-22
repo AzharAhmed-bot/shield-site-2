@@ -1,6 +1,5 @@
 import Landing from "./Landing";
 import ProgramCards from "./ProgramCards";
-import CourseCards from "./CourseCards";
 import Footer from "../Common/Footer";
 
 export default function Program(){
@@ -9,7 +8,6 @@ export default function Program(){
         <>
         <Landing/>
         <ProgramCards/>
-        <CourseCards/>
         <Footer/>
         </>
     )

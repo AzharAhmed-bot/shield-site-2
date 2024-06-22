@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import project1 from "../../assets/pngs/project1.jpg";
 import project2 from "../../assets/pngs/project2.jpg";
 import project3 from "../../assets/pngs/project3.jpg";
+import { statistics } from '../../constants';
 // Import other project images as needed
 
 export default function Landing() {
@@ -17,6 +18,7 @@ export default function Landing() {
   }, []); // Run effect only once on component mount
 
   return (
+    <>
     <div className="flex flex-col lg:flex-row gap-16 items-center justify-center min-h-screen px-4 lg:px-16">
       {/* Project Images */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:mt-0 mb-6 lg:mb-0">
@@ -29,7 +31,7 @@ export default function Landing() {
           <h1 className="lg:text-4xl text-3xl font-extrabold text-yellow-600 mb-6">
             ~ WHO WE ARE
           </h1>
-          <h2 className="lg:text-5xl text-4xl mt-6 text-gray-800 mb-4">
+          <h2 className="lg:text-5xl text-4xl mt-6 text-[#003445] mb-4">
             We help young entrepreneurs
           </h2>
           <p className="text-lg mt-6 text-gray-600">
@@ -39,5 +41,19 @@ export default function Landing() {
         </div>
       </div>
     </div>
+     {/* Statistics Section (Below) */}
+     <div className="w-full mt-[-40px]  mb-20 ">
+        <div className="p-6 bg-[#003445] text-white rounded-lg shadow-lg">
+          <div className="flex flex-col lg:flex-row justify-around text-center ">
+            {statistics.map((stat, index) => (
+              <div key={index} className="mb-6 lg:mb-0">
+                <h3 className="text-4xl font-bold">{stat.value}</h3>
+                <p className="text-lg">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

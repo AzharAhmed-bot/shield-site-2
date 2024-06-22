@@ -12,7 +12,7 @@ export default function AboutUs() {
         <>
             <Landing />
             {/* Values items */}
-            <div className="flex flex-col-reverse bg-black lg:flex-row min-h-full font-sans items-center lg:items-center justify-center">
+            <div className="flex flex-col-reverse bg-[#003445]  lg:flex-row min-h-full font-sans items-center lg:items-center justify-center">
                 {values.map((value, index) => (
                     <CompanyValues key={index} {...value} />
                 ))}

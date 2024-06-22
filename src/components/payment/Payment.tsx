@@ -4,12 +4,12 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Payment = () => {
     const initialOptions = {
-        clientId:clientId,
+        clientId: clientId,
         currency: currency,
         intent: intent,
     };
 
-    const createOrder = (actions) => {
+    const createOrder = (data, actions) => {
         return actions.order.create({
             purchase_units: [{
                 amount: {
@@ -21,9 +21,8 @@ const Payment = () => {
             }
         });
     }
-    
 
-    const onApprove = (actions) => {
+    const onApprove = (data, actions) => {
         return actions.order.capture().then(details => {
             toast.success("Transaction completed by " + details.payer.name.given_name);
         });

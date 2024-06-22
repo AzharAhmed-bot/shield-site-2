@@ -11,7 +11,7 @@ const Typewriter = ({ words }:TypewriterProps) => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(type, isDeleting ? 100 : 200);
+    const timer = setTimeout(type, isDeleting ? 150 :100);
     return () => clearTimeout(timer);
   }, [wordIndex, isDeleting, text]);
 
