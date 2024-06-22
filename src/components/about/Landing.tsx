@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import project1 from "../../assets/pngs/project1.jpg";
 import project2 from "../../assets/pngs/project2.jpg";
 import project3 from "../../assets/pngs/project3.jpg";
@@ -43,10 +43,10 @@ export default function Landing() {
     </div>
      {/* Statistics Section (Below) */}
      <div className="w-full mt-[-40px]  mb-20 ">
-        <div className="p-6 bg-[#003445] text-white rounded-lg shadow-lg">
-          <div className="flex flex-col lg:flex-row justify-around text-center ">
+        <div className="p-6  ">
+          <div className="flex flex-col lg:flex-row justify-around text-center   ">
             {statistics.map((stat, index) => (
-              <div key={index} className="mb-6 lg:mb-0">
+              <div key={index} className="mb-6 lg:mb-0 bg-gray-100 cursor-pointer rounded-lg shadow-lg p-4 transform transition duration-300 hover:scale-105 hover:bg-gray-200">
                 <h3 className="text-4xl font-bold">{stat.value}</h3>
                 <p className="text-lg">{stat.label}</p>
               </div>

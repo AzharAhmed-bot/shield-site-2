@@ -1,22 +1,22 @@
+import heroProject from "../../assets/pngs/heroProjects.png";
 
-import ThreeDModel from "../Common/ThreeDModel";
 
 
 export default function Landing() {
   
 
-  const content = {
-    title: "~ WHAT WE OFFER",
-    description: "We offer digital certifications",
-    paragraph: "SHIELD empowers rural youth with skills and resources to become entrepreneurs and solve community problems, creating jobs and positive change. Join the revolution!"
-  };
-
+const content = {
+        title: "~ OUR INITIATIVES",
+        description: "Discover our ongoing projects",
+        paragraph: "SHIELD empowers rural youth by equipping them with entrepreneurial skills and resources to tackle community challenges, fostering job creation and transformative change. Join us in driving this movement!"
+};
+      
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen px-4 lg:px-16">
+    <div className="flex flex-col lg:flex-row-reverse items-center justify-center min-h-screen px-4 lg:px-16">
       {/* 3D Model */}
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-start lg:mt-0 mb-6 lg:mb-0">
         <div className="overflow-hidden">
-          <ThreeDModel myScene="https://prod.spline.design/GTWRVOEWODUHp91A/scene.splinecode" />
+          <img className="rounded-lg shadow-lg " src={heroProject} alt="" />
         </div>
       </div>
 

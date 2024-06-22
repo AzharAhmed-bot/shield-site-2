@@ -1,10 +1,30 @@
+import { useState } from 'react';
 import Button from "../Common/Button";
 import { programs } from "../../constants";
+import Overlay from '../Common/Overlay';
 
 export default function ProgramCards() {
+  const [overlayData, setOverlayData] = useState<{
+    image: string;
+    title: string;
+    description: string;
+  } | null>(null);
+
+  const handleLearnMore = (program: any) => {
+    setOverlayData({
+      image: program.image,
+      title: program.title,
+      description: program.moreInfo,
+    });
+  };
+
+  const handleCloseOverlay = () => {
+    setOverlayData(null);
+  };
+
   return (
     <>
-      <h1 className="lg:text-5xl text-5xl lg:ml-16 ml-4 font-extrabold text-gray-900 mb-6">
+      <h1 className="lg:text-5xl text-5xl lg:ml-16 ml-4 font-extrabold text-[#003445] mb-6">
         Our <br /> Programs
       </h1>
       {programs.map((program, index) => (
@@ -27,17 +47,26 @@ export default function ProgramCards() {
               <h1 className="lg:text-2xl text-3xl font-extrabold text-yellow-600 mb-6">
                 {program.title}
               </h1>
-              <h2 className="lg:text-xl text-lg text-gray-600 mb-8">
+              <h2 className="lg:text-lg text-lg text-gray-600 mb-8">
                 {program.description}
               </h2>
               <Button
-                name="Enroll now!"
+                name="Learn more!"
                 style="bg-[#003445] py-4 px-8 rounded-2xl text-white"
+                onClick={() => handleLearnMore(program)}
               />
             </div>
           </div>
         </div>
       ))}
+      {overlayData && (
+        <Overlay
+          onClose={handleCloseOverlay}
+          image={overlayData.image}
+          title={overlayData.title}
+          description={overlayData.description}
+        />
+      )}
     </>
   );
 }

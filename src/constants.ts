@@ -23,10 +23,11 @@ import member1 from "./assets/pngs/member1.png";
 import member2 from "./assets/pngs/member2.png";
 import member3 from "./assets/pngs/member3.png";
 import member4 from "./assets/pngs/member4.png";
+import sme from "./assets/pngs/sme.jpg";
 import testimonial1 from "./assets/pngs/testimonial1.png";
 import testimonial2 from "./assets/pngs/testimonial2.png";
 import testimonial3 from "./assets/pngs/testimonial3.png";
-import { title } from "process";
+
 
 
 
@@ -34,6 +35,9 @@ export interface Project {
   image: string;
   title: string;
   description: string;
+  moreInfo:string;
+  reverse:boolean;
+
 }
 
 export interface Partners {
@@ -54,6 +58,7 @@ export interface Mission{
 export interface Programs{
   title: string;
   description:string;
+  moreInfo:string;
   image:string;
   alt:string;
   reverse:boolean;
@@ -150,21 +155,25 @@ export const partnersData = [
   {
     id: 1,
     title: "Impack Week",
+    image:partner1,
     description: "We are an impact organization whose goal is to drive transformative change for youth in Africa by empowering them with relevant Entrepreneurial and Tech skills through the provision of quality and decentralized training.",
   },
   {
     id: 2,
     title: "Help Aliance",
+    image:partner2,
     description: "Founded in 1999 by Lufthansa Group employees, help alliance – since 2017 as a non-profit limited liability company under the umbrella of the Lufthansa Group – is engaged worldwide in giving young people access to education and enabling them to lead a self-determined life.",
   },
   {
     id: 3,
     title: "Tui Care Foundation",
+    image:partner3,
     description: "TUI Care Foundation harnesses tourism to create opportunities for youth and support thriving global destinations. By linking travelers to worthy causes, we promote education, child and youth welfare, environmental protection, and the positive impact of tourism worldwide.",
   },
   {
     id: 4,
     title: "Waweza Movement",
+    image:partner4,
     description: "Waweza Movement rescues and develops forgotten communities through sustainable projects. We provide safety, restoration, spiritual enrichment, and skills training to lift people out of poverty. Our mission is to restore dignity, share Jesus' love, and empower individuals to help others.",
   },
 ];
@@ -234,6 +243,7 @@ export const faqContent={
 export  const navLinks = [
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
+    { to:'/projects'  , label:'Projects'},
     { to: 'https://shieldintl.org/academy/', label: 'Shield Learn' },
   ];
 
@@ -241,24 +251,33 @@ export  const navLinks = [
     {
       image: project1,
       title: "Waweza Foundation",
-      description: "Empowering kids through fun workshops that teach problem-solving, creativity, and effective pitching."
+      description: "Empowering kids through fun workshops that teach problem-solving, creativity, and effective pitching.",
+      moreInfo: "These workshops aim to inspire children through engaging activities that foster critical thinking and communication skills.",
+      reverse: false
     },
     {
       image: project5,
       title: "Tourist Development Program",
-      description: "Introduction to HTML elements and basics of software engineering."
+      description: "Introduction to HTML elements and basics of software engineering.",
+      moreInfo: "Participants will gain hands-on experience with HTML and foundational knowledge in software engineering principles.",
+      reverse: true
     },
     {
       image: project2,
       title: "Young Innovators",
-      description: "Interactive workshops that empower kids with problem-solving skills, creativity, and pitching."
+      description: "Interactive workshops that empower kids with problem-solving skills, creativity, and pitching.",
+      moreInfo: "Through interactive sessions, children develop innovative thinking and learn how to effectively present their ideas.",
+      reverse: false
     },
     {
       image: project6,
       title: "Tourism Project",
-      description: "Real-time GPS location view and tourism destination information. Booking tour guides for new places."
+      description: "Real-time GPS location view and tourism destination information. Booking tour guides for new places.",
+      moreInfo: "This project enhances tourist experiences by providing up-to-date location data and facilitating bookings for local guides.",
+      reverse: true
     }
   ];
+  
   
 export const typewriterWords: string[] = ["A Nexus of Innovation, Entrepreneurship, and Leadership.", "A Core of Imagination, Ventures, and Vision.", "A Fusion of Inventiveness, Business Ventures, and Mentorship."];
 
@@ -315,7 +334,8 @@ export const programs:Programs[] = [
     title: "Design Thinking School",
     description:
       "Within the context of the design thinking process, we empower youth in underprivileged communities with the skills to collaborate and think of themselves as problem solvers and to pioneer solutions to the problems they face within their community.",
-    image: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+     moreInfo:"Youth that go through the design thinking process run by SHIELD are then able to develop innovative and effective solutions that are human centred and feasible. This process is a great way to get youth to think outside the box and to be creative in their problem solving, learning empathy, creativity and iterative testing.Design Thinking is a human-centered approach for innovation to integrate the needs of people, the possibilities of technology, and the requirements for business success",
+      image: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     alt: "Design Thinking School",
     reverse: false,
     url:"https://shieldintl.org/academy/"
@@ -324,11 +344,21 @@ export const programs:Programs[] = [
     title: "SHIELD Entrepreneur",
     description:
       "This program is tailored at supporting any business especially those that are not venture backable. The SMEs will receive personalized training and mentorship focused on building their capacity to operate the business successfully, unlock financing from financial institutions and scale to new levels.",
-    image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    moreInfo:"Upon joining the SME Program and undergoing training, SMEs will be given access to our marketplace, an e-commerce platform where SMEs can post their various products to our huge network of community members and followers as potential clients. This gives them a wider market reach and access and boosts chances of making more sales.SHIELD brings the best of national MSME capacity building, coaching, and consulting services to youth in under priviledged communities while maximizing inclusion and supporting small and medium-sized businesses owned and run by women.",
+      image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     alt: "SHIELD Entrepreneur",
     reverse: true,
     url:"https://shieldintl.org/academy/"
   },
+  {
+    title:"Software Engineering",
+    description:"We provide a community for learning and earning opportunities. Our certifications prepare you for a career in software development, equip you with business acumen to help take your idea to the next level.",
+    moreInfo:"We provide a community for learning and earning opportunities. Our certifications prepare you for a career in software development, equip you with business acumen to help take your idea to the next level.",
+    image:sme,
+    alt:"Software Engineering",
+    reverse:false,
+    url:"https://shieldintl.org/academy/"
+  }
 ];
 
 export const courses:Courses[]=[

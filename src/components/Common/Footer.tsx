@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                 ))}
                 {/* Social media links section */}
-                <div className="footer-section mt-4">
+                <div className="footer-section mt-4 lg:mr-20">
                     <h2 className="text-3xl font-semibold mb-4 hover:text-yellow-500 mt-4">Follow Us</h2>
                     <ul className="flex space-x-4">
                         {socialLinks.map((link, idx) => (

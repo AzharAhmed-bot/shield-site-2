@@ -1,6 +1,8 @@
-import {partnersData} from "../../constants";
+import { partnersData } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 const Partners = () => {
+  const navigate=useNavigate();
   return (
     <div className="flex flex-col items-start mt-20 ml-16">
       <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">
@@ -30,6 +32,12 @@ const Partners = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-10">
+        {/* Styled Button */}
+        <button onClick={()=>navigate('/partners')} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full shadow-lg">
+          Explore More About Our Partners
+        </button>
       </div>
     </div>
   );
