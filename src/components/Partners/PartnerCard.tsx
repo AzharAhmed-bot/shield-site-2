@@ -43,11 +43,11 @@ export default function PartnerCards() {
             ${index !== currentSlide ? 'hidden' : 'hover:bg-gray-200 hover:shadow-2xl hover:shadow-[#003445] transition-shadow'}`}
         >
           <div className="rounded-2xl w-2/3 h-fix overflow-hidden">
-            <img className="lg:h-64 h-auto" src={program.image} alt="" />
+            <img className="lg:h-40 h-auto" src={program.image} alt="" />
           </div>
           <div className="flex flex-col w-3/4 gap-1">
-            <p className="font-extrabold text-lg">{program.title}</p>
-            <p className="text-sm lg:text-start text-center">{program.description}</p>
+            <p className="font-extrabold text-2xl">{program.title}</p>
+            <p className="text-md lg:text-start text-center">{program.description}</p>
           </div>
         </div>
       ))}

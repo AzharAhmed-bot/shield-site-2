@@ -7,12 +7,12 @@ const Footer = () => {
     const socialLinks = [
         {  icon: <AiFillLinkedin />, url: 'https://ke.linkedin.com/company/shieldintlorg' },
         {  icon: <AiFillInstagram />, url: 'https://www.instagram.com/shield_intl/' },
-        {  icon: <FaSquareXTwitter />  , url:'https://www.instagram.com/shield_intl/'}
+        {  icon: <FaSquareXTwitter />  , url:'https://x.com/shieldintlorg'}
     ];
 
     return (
         <footer className="bg-[#003445] text-white mt-12 overflow-hidden rounded-t-3xl py-10 cursor-pointer">
-            <div className="container ml-4   mx-auto flex flex-wrap justify-between">
+            <div className="container ml-4   mx-auto flex flex-wrap justify-between lg:px-0 px-4">
                 {footerSections.map((section, index) => (
                     <div key={index} className={`footer-section ${section.hidden && 'hidden lg:block'}`}>
                         {section.image && <img src={section.image} alt="Shield Logo" className="h-10 w-auto mr-4 mt-10" />}
@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                 ))}
                 {/* Social media links section */}
-                <div className="footer-section mt-4 lg:mr-20">
+                <div className="footer-section mt-4  lg:mr-20">
                     <h2 className="text-3xl font-semibold mb-4 hover:text-yellow-500 mt-4">Follow Us</h2>
                     <ul className="flex space-x-4">
                         {socialLinks.map((link, idx) => (
@@ -40,13 +40,6 @@ const Footer = () => {
                     </ul>
                 </div>
                 
-                {/* Company description section */}
-                <div className="footer-section mt-4">
-                    <h2 className="text-xl font-semibold mb-4 hover:text-yellow-500 mt-4">Our Mission</h2>
-                    <p className="text-sm mb-4">
-                        Our goal is to create design thinkers and entrepreneurs who can collaborate to solve social problems experienced in the slums and rural areas and in the process inspire even more fellow youths to join the movement thus bringing about a ripple effect of positive change in their communities!
-                    </p>
-                </div>
                 
                 
             </div>

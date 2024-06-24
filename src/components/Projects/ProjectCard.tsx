@@ -61,7 +61,7 @@ export default function ProjectCards() {
           </div>
           <div className="flex flex-col w-3/4 gap-1">
             <p className="font-extrabold text-lg">{program.title}</p>
-            <p className="text-sm lg:text-start text-center">{program.description}</p>
+            <p className="text-md lg:text-start text-center">{program.description}</p>
             <Button
               name="See more"
               style="bg-[#003445] font-extrabold py-2 px-6 rounded-xl transform transition-all duration-300 hover:scale-105 w-fit text-white transition-colors"

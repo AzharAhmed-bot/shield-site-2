@@ -32,7 +32,7 @@ export default function CompanyDescription() {
         <img
           src={lightBulb}
           alt="Light Bulb"
-          className="w-48 h-48 lg:w-64 lg:h-64 object-cover rounded-lg shadow-xl border-4 border-[#003445]"
+          className="w-48 h-48 lg:w-96 lg:h-96 object-cover rounded-lg shadow-xl border-4 border-[#003445]"
         />
       </div>
       <div className="p-4 lg:mr-20 lg:w-1/2 w-full transition-opacity duration-500 ease-in-out transform">

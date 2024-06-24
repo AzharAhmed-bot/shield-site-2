@@ -24,7 +24,7 @@ export default function ProgramCards() {
 
   return (
     <>
-      <h1 className="lg:text-5xl text-5xl lg:ml-16 ml-4 font-extrabold text-[#003445] mb-6">
+      <h1 className="lg:text-5xl text-5xl lg:mt-[-60px] lg:ml-16 ml-4 font-extrabold text-[#003445] ">
         Our <br /> Programs
       </h1>
       {programs.map((program, index) => (
@@ -40,7 +40,6 @@ export default function ProgramCards() {
               className="w-full h-auto lg:w-[80%] lg:h-[80%] rounded-3xl object-cover"
             />
           </div>
-
           {/* Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left py-6">
             <div className="w-full max-w-lg lg:max-w-none">

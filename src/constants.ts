@@ -23,6 +23,7 @@ import member1 from "./assets/pngs/member1.png";
 import member2 from "./assets/pngs/member2.png";
 import member3 from "./assets/pngs/member3.png";
 import member4 from "./assets/pngs/member4.png";
+import heroProject from "./assets/pngs/heroProjects.png";
 import sme from "./assets/pngs/sme.jpg";
 import testimonial1 from "./assets/pngs/testimonial1.png";
 import testimonial2 from "./assets/pngs/testimonial2.png";
@@ -181,23 +182,27 @@ export const partnersData = [
 export const teamData=[
   {
     image:member1,
-    name:"James Mugabe",
-    title:"Co-founder, Managing Director",
+    name:"James Mugambi",
+    title:"Co-founder,CEO",
+    linkedIn:"https://www.linkedin.com/in/jamesmugambi/"
   },
   {
     image:member2,
     name:"David Kiai",
     title:"Co-founder,CIO",
+    linkedIn:" https://www.linkedin.com/in/david-kiai-4a76201a5/"
   },
   {
     image:member3,
     name:"Eric Murithi",
-    title:"Co-founder, CEO",
+    title:"Co-founder, CTO",
+    linkedIn:" https://linkedin.com/in/eric-muriithi-48346117b/"
   },
   {
     image:member4,
     name:"Collins Wanga",
     title:"Software Engineer",
+    linkedIn:" https://www.linkedin.com/in/collins-wanga-318590220/"
   }
 ]
 
@@ -244,6 +249,7 @@ export  const navLinks = [
     { to: '/about', label: 'About' },
     { to: '/programs', label: 'Programs' },
     { to:'/projects'  , label:'Projects'},
+    { to:'/partners'  , label:'Partners'},
     { to: 'https://shieldintl.org/academy/', label: 'Shield Learn' },
   ];
 
@@ -286,7 +292,7 @@ export const footerSections = [
         title: "Reach Us",
         hidden:false,
         content: [
-            { text: "APA Arcade, 1st Floor"},
+            { text: "Olympic estate, house no.1"},
             { text: "Phone: +254 700 366137" },
             {text:"info@shieldint.org" }
             
@@ -294,23 +300,13 @@ export const footerSections = [
         image: shieldLogo
     },
     {
-        title: "Company",
-        hidden:true,
-        content: [
-            { text: "Home" },
-            { text: "About" },
-            
-        ]
-    },
-    {
-        title: "Our services",
+        title: "Our programs",
         hidden:true,
         content: [
             { text: "Design Thinking School" },
             { text: "SME and Startup Training" },
             { text: "SHIELD Developer Program" },
-            { text: "Capacity Building Programs for" },
-            { text: "startups" },
+            { text: "Capacity Building Programs" },
 
         ]
     },
@@ -319,7 +315,6 @@ export const footerSections = [
         hidden:false,
         content: [
             { text: "Home" },
-            { text: "Solutions" },
             { text: "Projects" },
             {text:"Programs"},
             {text:"Partners"}
@@ -345,16 +340,16 @@ export const programs:Programs[] = [
     description:
       "This program is tailored at supporting any business especially those that are not venture backable. The SMEs will receive personalized training and mentorship focused on building their capacity to operate the business successfully, unlock financing from financial institutions and scale to new levels.",
     moreInfo:"Upon joining the SME Program and undergoing training, SMEs will be given access to our marketplace, an e-commerce platform where SMEs can post their various products to our huge network of community members and followers as potential clients. This gives them a wider market reach and access and boosts chances of making more sales.SHIELD brings the best of national MSME capacity building, coaching, and consulting services to youth in under priviledged communities while maximizing inclusion and supporting small and medium-sized businesses owned and run by women.",
-      image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: sme,
     alt: "SHIELD Entrepreneur",
     reverse: true,
     url:"https://shieldintl.org/academy/"
   },
   {
-    title:"Software Engineering",
+    title:"Software Development",
     description:"We provide a community for learning and earning opportunities. Our certifications prepare you for a career in software development, equip you with business acumen to help take your idea to the next level.",
     moreInfo:"We provide a community for learning and earning opportunities. Our certifications prepare you for a career in software development, equip you with business acumen to help take your idea to the next level.",
-    image:sme,
+    image:heroProject,
     alt:"Software Engineering",
     reverse:false,
     url:"https://shieldintl.org/academy/"

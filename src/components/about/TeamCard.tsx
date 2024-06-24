@@ -14,7 +14,7 @@ const TeamCard: React.FC<TeamCardProp> = ({ image, name, title, linkedin }) => {
         <img src={image} alt={name} className="w-24 h-24 rounded-full mb-4" />
         <h3 className="text-2xl font-semibold mb-2">{name}</h3>
         <p className="text-gray-500 mb-4">{title}</p>
-        <a href={linkedin} className="text-blue-600 hover:text-blue-800 cursor-pointer transition-colors">
+        <a href={linkedin} className="text-[#003445]  cursor-pointer transition-colors">
           <FaLinkedin size={30} />
         </a>
       </div>

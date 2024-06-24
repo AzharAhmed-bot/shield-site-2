@@ -27,9 +27,7 @@ export default function Landing() {
           onClick={handleDonate}
         />
         <div className="underline-animation mt-12"></div>
-      </div>
-      
-      
+      </div>   
     </div>
   );
 }

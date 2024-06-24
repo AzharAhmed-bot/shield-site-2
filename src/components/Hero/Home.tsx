@@ -77,7 +77,7 @@ const Home: React.FC = () => {
       <FaqSection/>
 
       {/* Partnership items */}
-      <div className="flex flex-col lg:mt-24 mt-12  min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
+      <div className="flex flex-col lg:mt-0 mt-12  min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
         <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-8 p-4 lg:p-0">
           {partnershipItems.map((partner, index) => (
             <PartnershipItem key={index} image={partner.image} />

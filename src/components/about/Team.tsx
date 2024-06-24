@@ -9,7 +9,7 @@ const Team = () => {
       </h1>
     <div className="flex flex-wrap justify-center mt-10">
       {teamData.map((member, index) => (
-        <TeamCard key={index} image={member.image} name={member.name} title={member.title} />
+        <TeamCard key={index} linkedin={member.linkedIn} image={member.image} name={member.name} title={member.title} />
       ))}
     </div>
     </>

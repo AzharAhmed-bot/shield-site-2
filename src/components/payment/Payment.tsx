@@ -1,5 +1,5 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-import { clientId, amount, intent, currency, shippingPreference } from "../../temp";
+import { clientId, amount, intent, currency } from "../../temp";
 import toast, { Toaster } from 'react-hot-toast';
 
 const Payment = () => {
@@ -16,9 +16,7 @@ const Payment = () => {
                     value: amount
                 }
             }],
-            application_context: {
-                shipping_preference: shippingPreference
-            }
+            
         });
     }
 

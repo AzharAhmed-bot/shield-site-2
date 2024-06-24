@@ -32,7 +32,7 @@ const PartnershipItem: React.FC<PartnershipItemProps> = ({ image }) => {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       } transition-all duration-500 ease-in-out`}
     >
-      <img className="h-12 w-36 object-contain mb-4" src={image} alt="Partner" />
+      <img className="h-16 w-40 object-contain mb-4" src={image} alt="Partner" />
     </div>
   );
 };
