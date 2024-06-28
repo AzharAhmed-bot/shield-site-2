@@ -35,7 +35,6 @@ export default function PartnerCards() {
           Next
         </button>
       </div>
-
       {partnersData.map((program, index) => (
         <div
           key={index}
@@ -43,7 +42,7 @@ export default function PartnerCards() {
             ${index !== currentSlide ? 'hidden' : 'hover:bg-gray-200 hover:shadow-2xl hover:shadow-[#003445] transition-shadow'}`}
         >
           <div className="rounded-2xl w-2/3 h-fix overflow-hidden">
-            <img className="lg:h-40 h-auto" src={program.image} alt="" />
+            <img className="lg:h-36 h-auto" src={program.image} alt="" />
           </div>
           <div className="flex flex-col w-3/4 gap-1">
             <p className="font-extrabold text-2xl">{program.title}</p>
@@ -51,7 +50,6 @@ export default function PartnerCards() {
           </div>
         </div>
       ))}
-
     </div>
   );
 }

@@ -258,31 +258,32 @@ export  const navLinks = [
       image: project1,
       title: "Waweza Foundation",
       description: "Empowering kids through fun workshops that teach problem-solving, creativity, and effective pitching.",
-      moreInfo: "These workshops aim to inspire children through engaging activities that foster critical thinking and communication skills.",
+      moreInfo: "These workshops aim to inspire children through engaging activities that foster critical thinking and communication skills. We focus on hands-on projects that encourage teamwork and innovation, helping children to not only learn but also to apply their knowledge in real-world scenarios. By the end of the program, participants are equipped with the skills needed to tackle challenges and present their ideas confidently.",
       reverse: false
     },
     {
       image: project5,
       title: "Tourist Development Program",
       description: "Introduction to HTML elements and basics of software engineering.",
-      moreInfo: "Participants will gain hands-on experience with HTML and foundational knowledge in software engineering principles.",
+      moreInfo: "We began the foundational software development program on the 10th of June where our goal is to create at least 5 tech-enabled tourism ventures. The innovation hub is open from 8:00 AM EAT up until 7:00 PM EAT. We do however run instructor-based coding sessions from 9:00 AM EAT up until 2:00 PM EAT where learners are currently engaged in learning the fundamentals of web application development by building a tours and travels website complete with e-commerce and booking functionality.",
       reverse: true
     },
     {
       image: project2,
       title: "Young Innovators",
       description: "Interactive workshops that empower kids with problem-solving skills, creativity, and pitching.",
-      moreInfo: "Through interactive sessions, children develop innovative thinking and learn how to effectively present their ideas.",
+      moreInfo: "Through interactive sessions, children develop innovative thinking and learn how to effectively present their ideas. Our curriculum includes exercises in design thinking, collaborative projects, and public speaking, ensuring that each participant gains a comprehensive skill set. By fostering an environment of curiosity and exploration, we help young innovators turn their ideas into tangible solutions and build their confidence in sharing them with others.",
       reverse: false
     },
     {
       image: project6,
       title: "Tourism Project",
       description: "Real-time GPS location view and tourism destination information. Booking tour guides for new places.",
-      moreInfo: "This project enhances tourist experiences by providing up-to-date location data and facilitating bookings for local guides.",
+      moreInfo: "This project enhances tourist experiences by providing up-to-date location data and facilitating bookings for local guides. Tourists can access detailed information about destinations, including historical context, cultural significance, and practical tips. The integration of real-time GPS ensures that visitors can navigate new areas with ease, while the guide booking feature connects them with knowledgeable locals who can offer personalized tours and insights. This project aims to make travel more enriching and accessible.",
       reverse: true
     }
   ];
+  
   
   
 export const typewriterWords: string[] = ["A Nexus of Innovation, Entrepreneurship, and Leadership.", "A Core of Imagination, Ventures, and Vision.", "A Fusion of Inventiveness, Business Ventures, and Mentorship."];

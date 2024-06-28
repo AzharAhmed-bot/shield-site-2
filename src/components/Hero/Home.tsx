@@ -5,7 +5,6 @@ import project1 from "../../assets/pngs/project1.jpg";
 import project2 from "../../assets/pngs/project2.jpg";
 import project3 from "../../assets/pngs/project3.jpg";
 import project4 from "../../assets/pngs/project4.jpg";
-import Testimonials from "./Testimonials";
 import ShieldSolutions from './SheildSolutions';
 import CompanyDescription from './CompanyDescription';
 import Opportunity from "./Opportunity";
@@ -70,7 +69,7 @@ const Home: React.FC = () => {
       <ShieldSolutions />
 
       {/* Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       <Opportunity/>
 
