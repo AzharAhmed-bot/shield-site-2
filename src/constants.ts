@@ -245,13 +245,13 @@ export const faqContent={
 }
 
 
-export  const navLinks = [
-    { to: '/about', label: 'About' },
-    { to: '/programs', label: 'Programs' },
-    { to:'/projects'  , label:'Projects'},
-    { to:'/partners'  , label:'Partners'},
-    { to: 'https://shieldintl.org/academy/', label: 'Shield Learn' },
-  ];
+export const navLinks = [
+  { to: '/about', label: 'About' },
+  { to: '/programs', label: 'Programs' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/partners', label: 'Partners' },
+  { to: 'https://shieldintl.org/academy/', label: 'Shield Learn', external: true },
+];
 
   export const cardContent: Project[] = [
     {
