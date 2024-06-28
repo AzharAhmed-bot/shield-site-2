@@ -24,7 +24,7 @@ const Partners = () => {
                 <h2 className="text-4xl font-bold">{String(partner.id).padStart(2, '0')}</h2>
                 <div className="ml-6">
                   <h3 className="text-3xl font-bold">{partner.title}</h3>
-                  <p className="mt-2 text-lg text-gray-600">
+                  <p className="mt-2 lg:text-lg text-sm text-gray-600">
                     {partner.description}
                   </p>
                 </div>
@@ -35,7 +35,7 @@ const Partners = () => {
       </div>
       <div className="mt-10">
         {/* Styled Button */}
-        <button onClick={()=>navigate('/partners')} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-full shadow-lg">
+        <button onClick={()=>navigate('/partners')} className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold lg:py-4 py-2 lg:px-8  px-2 rounded-full shadow-lg">
           Explore More About Our Partners
         </button>
       </div>

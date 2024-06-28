@@ -35,14 +35,14 @@ const Opportunity = () => {
           className="w-auto h-auto object-cover rounded-lg border-4 border-[#003445]"
         />
       </div>
-      <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 ml-12 lg:w-2/3 w-full transition-opacity duration-500 ease-in-out">
+      <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:ml-12 lg:w-2/3 w-full transition-opacity duration-500 ease-in-out">
         <h1 className="py-6 rounded-lg text-[#003445] text-2xl lg:text-3xl font-bold">
           Opportunity Areas
         </h1>
-        <p className="text-lg lg:text-xl leading-relaxed text-[#003445] max-w-4xl">
+        <p className="text-sm lg:text-xl leading-relaxed text-[#003445] ">
           The main approach to our programs will be helping startups in various sectors to integrate circular economy into their business models to increase sustainability while reducing wastage and carbon footprint.
         </p>
-        <div className="text-md lg:text-lg leading-relaxed text-[#003445] max-w-4xl">
+        <div className="text-sm lg:text-lg leading-relaxed text-[#003445] max-w-4xl">
           <p>Agriculture and food value chain</p>
           <p>E-commerce and Logistics</p>
           <p>Tourism and Mobility</p>

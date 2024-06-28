@@ -13,11 +13,11 @@ const Footer = () => {
 
     return (
         <footer className="bg-[#003445] text-white mt-12 overflow-hidden rounded-t-3xl py-10 cursor-pointer">
-            <div className="container ml-4 mx-auto flex flex-wrap justify-between lg:px-0 px-4">
+            <div className="container ml-4 mx-auto flex lg:flex-row md:flex-row flex-col flex-wrap justify-between lg:px-0 px-4">
                 {footerSections.map((section, index) => (
                     <div key={index} className={`footer-section ${section.hidden && 'hidden lg:block'}`}>
                         {section.image && <img src={section.image} alt="Shield Logo" className="h-10 w-auto mr-4 mt-10" />}
-                        <h2 className="text-xl font-semibold mb-4 hover:text-yellow-500 mt-4">{section.title}</h2>
+                        <h2 className="lg:text-xl text-md font-semibold mb-4 hover:text-yellow-500 mt-4">{section.title}</h2>
                         <ul>
                             {section.content.map((item, idx) => (
                                 <li key={idx} className="py-3 hover:text-yellow-500">
