@@ -24,6 +24,4 @@ dist-ssr
 *.sw?
 
 # Envrionment
-.env
-temp.ts
 

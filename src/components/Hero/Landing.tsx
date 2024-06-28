@@ -1,5 +1,5 @@
 import Typewrite from "./TypeWrite";
-import { typewriterWords, statistics } from "../../constants";
+import { typewriterWords } from "../../constants";
 import { useNavigate } from "react-router-dom";
 import Button from "../Common/Button";
 

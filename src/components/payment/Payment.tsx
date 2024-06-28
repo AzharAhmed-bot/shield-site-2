@@ -9,18 +9,17 @@ const Payment = () => {
         intent: intent,
     };
 
-    const createOrder = (data, actions) => {
+    const createOrder = (_data, actions) => {
         return actions.order.create({
             purchase_units: [{
                 amount: {
                     value: amount
                 }
             }],
-            
         });
-    }
+    };
 
-    const onApprove = (data, actions) => {
+    const onApprove = (_data, actions) => {
         return actions.order.capture().then(details => {
             toast.success("Transaction completed by " + details.payer.name.given_name);
         });
@@ -32,8 +31,8 @@ const Payment = () => {
             <PayPalScriptProvider options={initialOptions}>
                 <PayPalButtons
                     style={{ layout: "horizontal", height: 45 }}
-                    createOrder={createOrder}
-                    onApprove={onApprove}
+                    createOrder={(data, actions) => createOrder(data, actions)}
+                    onApprove={(data, actions) => onApprove(data, actions)}
                 />
             </PayPalScriptProvider>
         </div>

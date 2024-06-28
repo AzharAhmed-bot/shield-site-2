@@ -315,10 +315,10 @@ export const footerSections = [
         title: "Quick Links",
         hidden:false,
         content: [
-            { text: "Home" },
-            { text: "Projects" },
-            {text:"Programs"},
-            {text:"Partners"}
+            { text: "Home",to:"/" },
+            { text: "Projects",to:"/projects" },
+            {text:"Programs", to:"programs"},
+            {text:"Partners",to:"/partners"}
         ]
     }
 ];

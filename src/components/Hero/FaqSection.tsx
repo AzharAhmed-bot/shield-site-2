@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { faqContent } from "../../constants"; // Assuming faqContent is imported or defined elsewhere
 
 export default function FaqSection() {
