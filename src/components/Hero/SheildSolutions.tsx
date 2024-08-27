@@ -22,7 +22,7 @@ const ShieldSolutions = () => {
 
   return (
     <div id="company-section" className={`flex flex-col items-start mt-20 ml-16 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">Shield <br /> solutions</h1>
+      <h1 className="lg:text-6xl text-5xl font-extrabold text-gray-900 mb-6">Shield <br /> Solutions</h1>
       <div className="relative mt-10">
         {/* Vertical Line */}
         <div className="absolute h-full border-l-4 border-yellow-500" style={{ left: '0px' }}></div>

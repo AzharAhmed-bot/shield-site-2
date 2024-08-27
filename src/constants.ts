@@ -23,6 +23,7 @@ import member1 from "./assets/pngs/member1.png";
 import member2 from "./assets/pngs/member2.png";
 import member3 from "./assets/pngs/member3.png";
 import member4 from "./assets/pngs/member4.png";
+import member5 from "./assets/pngs/member6.png";
 import heroProject from "./assets/pngs/heroProjects.png";
 import sme from "./assets/pngs/sme.jpg";
 import testimonial1 from "./assets/pngs/testimonial1.png";
@@ -43,6 +44,7 @@ export interface Project {
 
 export interface Partners {
   image: string;
+  url:string;
 }
 
 export interface Values {
@@ -102,19 +104,24 @@ export const testimonials = [
 
 export const partnershipItems: Partners[] = [
   {
-    image: partner1
+    image: partner1,
+    url:"https://www.impactweek.net/",
   },
   {
-    image: partner2
+    image: partner2,
+    url:"https://www.tuicarefoundation.com/"
   },
   {
-    image: partner3
+    image: partner3,
+    url:"https://www.linkedin.com/company/waweza-movement/"
   },
   {
-    image:partner5
+    image:partner5,
+    url:"https://honeycoin.app/"
   },
   {
-    image:partner4
+    image:partner4,
+    url:"https://shieldintl.org/"
   },
 ];
 
@@ -203,6 +210,12 @@ export const teamData=[
     name:"Collins Wanga",
     title:"Software Engineer",
     linkedIn:" https://www.linkedin.com/in/collins-wanga-318590220/"
+  },
+  {
+    image:member5,
+    name:"Azhar Ahmed",
+    title:"Software Engineer",
+    linkedIn:"https://www.linkedin.com/in/azhar-ahmed-458021258/"
   }
 ]
 
@@ -250,7 +263,7 @@ export const navLinks = [
   { to: '/programs', label: 'Programs' },
   { to: '/projects', label: 'Projects' },
   { to: '/partners', label: 'Partners' },
-  { to: 'https://shieldintl.org/academy/', label: 'Shield Learn', external: true },
+  { to: 'https://shieldintl.org/academy/', label: 'SHIELD Learn', external: true },
 ];
 
   export const cardContent: Project[] = [
@@ -293,7 +306,7 @@ export const footerSections = [
         title: "Reach Us",
         hidden:false,
         content: [
-            { text: "Olympic estate, house no.1"},
+            { text: "Olympic Estate, House No.1"},
             { text: "Phone: +254 700 366137" },
             {text:"info@shieldint.org" }
             
@@ -317,7 +330,7 @@ export const footerSections = [
         content: [
             { text: "Home",to:"/" },
             { text: "Projects",to:"/projects" },
-            {text:"Programs", to:"programs"},
+            {text:"Programs", to:"/programs"},
             {text:"Partners",to:"/partners"}
         ]
     }

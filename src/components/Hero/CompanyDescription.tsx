@@ -37,7 +37,7 @@ export default function CompanyDescription() {
       </div>
       <div className="p-4 lg:mr-20 lg:w-1/2 w-full transition-opacity duration-500 ease-in-out transform">
         <h2 className="text-3xl lg:text-5xl mt-16 lg:mt-0 font-extrabold text-[#003445]">
-          What We Do
+          ~ What We Do
         </h2>
         <h3 className="text-2xl lg:text-4xl mt-4 lg:mt-2 font-semibold text-[#003445]">
           Company Overview

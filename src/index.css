@@ -54,5 +54,59 @@ body, p, a, li, blockquote {
   }
   
   
-
+  .overlay-enter {
+    @apply transition-opacity duration-500 ease-in-out;
+  }
+  
+  .overlay-content-enter {
+    @apply transform scale-95 opacity-0 transition-all duration-500 ease-in-out;
+  }
+  
+  .overlay-card-enter {
+    @apply transition-transform duration-500 ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes cardSlideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .overlay-enter {
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .overlay-content-enter {
+    animation: scaleIn 0.5s forwards;
+  }
+  
+  .overlay-card-enter {
+    animation: cardSlideIn 0.5s forwards;
+  }
+  
   

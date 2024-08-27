@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         {/* Colored overlay with opacity */}
         <div className="absolute inset-0 bg-[#003445] opacity-70"></div>
         {/* First viewport content */}
-        <div className="relative z-10 flex flex-col-reverse lg:flex-row w-full h-full">
+        <div className="relative z-10 flex flex-col-reverse lg:mt-20 lg:flex-row w-full h-full">
           <Landing />
         </div>
       </div>
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
       <div className="flex flex-col lg:mt-0 mt-12  min-h-full font-sans items-center justify-center pt-8 lg:pt-16">
         <div className="flex flex-wrap justify-center lg:justify-start gap-4 lg:gap-8 p-4 lg:p-0">
           {partnershipItems.map((partner, index) => (
-            <PartnershipItem key={index} image={partner.image} />
+            <PartnershipItem key={index} url={partner.url} image={partner.image} />
           ))}
         </div>
       </div>

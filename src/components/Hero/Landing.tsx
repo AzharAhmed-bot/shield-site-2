@@ -11,7 +11,7 @@ export default function Landing() {
   };
 
   return (
-    <div className="w-full lg:w-3/4 mx-auto flex flex-col items-center">
+    <div className="w-full lg:w-3/4 mx-auto flex flex-col items-center ">
       {/* Typewriter Section */}
       <div className="w-full p-8  flex flex-col text-center items-center">
         <h1 className="text-5xl lg:text-6xl font-extrabold text-white mb-6 ">
