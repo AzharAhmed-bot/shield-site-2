@@ -14,12 +14,12 @@ const Navbar: React.FC = () => {
     <nav className="bg-gray-100 shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 lg:ml-10 md:ml-5 sm:ml-3 flex items-center">
+          <div className="flex-shrink-0 md:ml-5 sm:ml-3 flex items-center">
             <Link to="/" className="text-2xl font-bold text-gray-900">
               <img src={shieldLogo} alt="Logo" className="h-10 w-auto" />
             </Link>
           </div>
-          <div className="hidden gap-10 mr-20 text-xl md:flex md:items-center md:space-x-4">
+          <div className="hidden gap-10  text-md md:flex md:items-center md:space-x-4">
             {navLinks.map((link) =>
               link.external ? (
                 <a
