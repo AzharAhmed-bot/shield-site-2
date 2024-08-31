@@ -1,14 +1,8 @@
-
 import { useState } from 'react';
 import { partnersData } from '../../constants';
 
-
 export default function PartnerCards() {
- 
-
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide === partnersData.length - 1 ? 0 : prevSlide + 1));
@@ -38,11 +32,15 @@ export default function PartnerCards() {
       {partnersData.map((program, index) => (
         <div
           key={index}
-          className={`h-auto w-fix  bg-gray-100 rounded-3xl text-[#003445] font-sans p-4 flex lg:flex-row flex-col items-center justify-center gap-8
+          className={`h-auto w-fix bg-gray-100 rounded-3xl text-[#003445] font-sans p-4 flex lg:flex-row flex-col items-center justify-center gap-8
             ${index !== currentSlide ? 'hidden' : 'hover:bg-gray-200 hover:shadow-2xl hover:shadow-[#003445] transition-shadow'}`}
         >
           <div className="rounded-2xl w-2/3 h-fix overflow-hidden">
-            <img className="lg:h-36 h-auto" src={program.image} alt="" />
+            <img
+              className="lg:h-36 h-auto object-cover object-center"
+              src={program.image}
+              alt=""
+            />
           </div>
           <div className="flex flex-col w-3/4 gap-1">
             <p className="font-extrabold text-2xl">{program.title}</p>
@@ -50,6 +48,17 @@ export default function PartnerCards() {
           </div>
         </div>
       ))}
+      <div className="flex justify-center mt-4">
+        {partnersData.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full mx-1 ${
+              index === currentSlide ? 'bg-gray-900' : 'bg-gray-300'
+            }`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

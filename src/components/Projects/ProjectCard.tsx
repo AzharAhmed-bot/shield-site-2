@@ -70,7 +70,17 @@ export default function ProjectCards() {
           </div>
         </div>
       ))}
-
+      <div className="flex justify-center mt-4">
+        {cardContent.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full mx-1 ${
+              index === currentSlide ? 'bg-gray-900' : 'bg-gray-300'
+            }`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
       {overlayData && (
         <Overlay
           onClose={handleCloseOverlay}
