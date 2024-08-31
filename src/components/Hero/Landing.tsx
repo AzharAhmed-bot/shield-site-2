@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Typewrite from "./TypeWrite";
 import { typewriterWords } from "../../constants";
-import { useNavigate } from "react-router-dom";
 import Button from "../Common/Button";
 import VideoOverlay from '../Common/VideoOverlay';
 
 export default function Landing() {
-  const navigate = useNavigate();
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const handleDonate = () => {
-    navigate("/payment");
-  };
 
   const handleVideoOpen = () => {
     setIsVideoOpen(true);
