@@ -48,7 +48,6 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="text-gray-900 hover:text-gray-900 focus:outline-none focus:text-gray-900"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >

@@ -121,7 +121,7 @@ export const partnershipItems: Partners[] = [
   },
   {
     image:partner4,
-    url:"https://shieldintl.org/"
+    url:"https://sdtech.co.ke/"
   },
 ];
 
