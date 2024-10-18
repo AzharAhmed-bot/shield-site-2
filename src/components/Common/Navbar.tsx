@@ -11,21 +11,24 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-100 shadow-md fixed w-full z-50">
+    <nav className="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex-shrink-0 md:ml-5 sm:ml-3 flex items-center">
-            <Link to="/" className="text-2xl font-bold text-gray-900">
-              <img src={shieldLogo} alt="Logo" className="h-10 w-auto" />
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/">
+              <img src={shieldLogo} alt="Logo" className="h-12 w-auto" />
             </Link>
           </div>
-          <div className="hidden gap-10  text-md md:flex md:items-center md:space-x-4">
+
+          {/* Links (Desktop) */}
+          <div className="hidden md:flex space-x-8">
             {navLinks.map((link) =>
               link.external ? (
                 <a
                   key={link.to}
                   href={link.to}
-                  className="text-gray-700 hover:text-yellow-700"
+                  className="text-gray-700 hover:text-yellow-500 transition-colors duration-200"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -36,7 +39,9 @@ const Navbar: React.FC = () => {
                   key={link.to}
                   to={link.to}
                   className={({ isActive }) =>
-                    `text-gray-700 hover:text-yellow-700 ${isActive ? 'text-yellow-700' : ''}`
+                    `text-gray-700 hover:text-yellow-500 transition-colors duration-200 ${
+                      isActive ? 'text-yellow-500' : ''
+                    }`
                   }
                 >
                   {link.label}
@@ -44,10 +49,12 @@ const Navbar: React.FC = () => {
               )
             )}
           </div>
+
+          {/* Mobile Menu Button */}
           <div className="flex md:hidden">
             <button
               onClick={toggleMenu}
-              type="button"
+              className="text-gray-700 focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -71,15 +78,16 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-50 border-t border-gray-200" id="mobile-menu">
-          <div className="px-4 pt-4 pb-4 space-y-1">
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg transition-all duration-300" id="mobile-menu">
+          <div className="px-4 pt-4 pb-4 space-y-2">
             {navLinks.map((link) =>
               link.external ? (
                 <a
                   key={link.to}
                   href={link.to}
-                  className="block text-gray-700 hover:bg-gray-200 hover:text-gray-900 rounded-md px-3 py-2"
+                  className="block text-gray-700 hover:bg-gray-100 hover:text-yellow-500 rounded-md px-4 py-2 transition-colors duration-200"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -90,7 +98,9 @@ const Navbar: React.FC = () => {
                   key={link.to}
                   to={link.to}
                   className={({ isActive }) =>
-                    `block text-gray-700 hover:bg-gray-200 hover:text-gray-900 rounded-md px-3 py-2 ${isActive ? 'bg-gray-200' : ''}`
+                    `block text-gray-700 hover:bg-gray-100 hover:text-yellow-500 rounded-md px-4 py-2 transition-colors duration-200 ${
+                      isActive ? 'bg-gray-100 text-yellow-500' : ''
+                    }`
                   }
                 >
                   {link.label}
