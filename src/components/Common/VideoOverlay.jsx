@@ -9,7 +9,7 @@ export default function VideoOverlay({ url, onClose }) {
 
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
+      className="fixed z-50 top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center"
       onClick={handleClose}
     >
       <div

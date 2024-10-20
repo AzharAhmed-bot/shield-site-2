@@ -186,38 +186,44 @@ export const partnersData = [
   },
 ];
 
-export const teamData=[
+export const teamData = [
   {
-    image:member1,
-    name:"James Mugambi",
-    title:"Co-founder,CEO",
-    linkedIn:"https://www.linkedin.com/in/jamesmugambi/"
+    image: member1,
+    name: "James Mugambi",
+    title: "Co-founder, CEO",
+    linkedIn: "https://www.linkedin.com/in/jamesmugambi/",
+    description: "Leading the vision and strategy, ensuring company growth and innovation."
   },
   {
-    image:member2,
-    name:"David Kiai",
-    title:"Co-founder,CIO",
-    linkedIn:" https://www.linkedin.com/in/david-kiai-4a76201a5/"
+    image: member2,
+    name: "David Kiai",
+    title: "Co-founder, CIO",
+    linkedIn: "https://www.linkedin.com/in/david-kiai-4a76201a5/",
+    description: "Oversees the IT infrastructure, focusing on innovation and technology integration."
   },
   {
-    image:member3,
-    name:"Eric Murithi",
-    title:"Co-founder, CTO",
-    linkedIn:" https://linkedin.com/in/eric-muriithi-48346117b/"
+    image: member3,
+    name: "Eric Murithi",
+    title: "Co-founder, CTO",
+    linkedIn: "https://linkedin.com/in/eric-muriithi-48346117b/",
+    description: "Driving technology strategy and leading the development team."
   },
   {
-    image:member4,
-    name:"Collins Wanga",
-    title:"Software Engineer",
-    linkedIn:" https://www.linkedin.com/in/collins-wanga-318590220/"
+    image: member4,
+    name: "Collins Wanga",
+    title: "Software Engineer",
+    linkedIn: "https://www.linkedin.com/in/collins-wanga-318590220/",
+    description: "Specializes in backend development, creating scalable solutions."
   },
   {
-    image:member5,
-    name:"Azhar Ahmed",
-    title:"Software Engineer",
-    linkedIn:"https://www.linkedin.com/in/azhar-ahmed-458021258/"
+    image: member5,
+    name: "Azhar Ahmed",
+    title: "Software Engineer",
+    linkedIn: "https://www.linkedin.com/in/azhar-ahmed-458021258/",
+    description: "Focused on building intuitive user interfaces and front-end solutions."
   }
-]
+];
+
 
 export const faqContent={
   title:"FAQ on SHIELD PROGRAM",
